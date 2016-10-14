@@ -1,0 +1,26 @@
+/*background*/
+.headline {
+  text-align: center;
+  background-image: url(../img/hbackground.jpeg);
+  background-size: cover;
+  border-bottom: 40px solid #FC942A;
+}
+img {
+  margin: 50px 0 0 0;
+  width: 250px;
+  border: 20px double #EBA156;
+  border-radius: 200px;
+}
+h1 {
+  color: #FC942A;
+  font-family: 'Lobster', cursive;
+  font-weight: bolder;
+  font-size: 70px;
+  margin-bottom: 50px;
+}
+p {
+  color: #EBA156;
+  font-size: 17px;
+  padding-bottom: 40px;
+}
+/*img round*/
