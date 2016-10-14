@@ -1,16 +1,16 @@
 # Portfolio Landing Website
-##by Amy Hwang
+## by Amy Hwang
 
-# * description of program
+# description of program
 This webpage is for a brief introduction of the author and to show projects that the author has built.
 
-# * program setup instructions
-Clone this repository.
-Open index.html and CSS stylesheets.
-Then open the webpage via a brower of your choice.
+# program setup instructions
+*Clone this repository.
+*Open index.html and CSS stylesheets.
+*Then open the webpage via a brower of your choice.
 
-# * link to site on GitHub Pages
-https://github.com/amy1hwang/portfolio-landing
+# link to site on GitHub Pages
+_https://github.com/amy1hwang/portfolio-landing_
 
-# * copyright and license information
+# copyright and license information
 Copyright (c) 2016 Amy Hwang. This software is licensed under the Github license.
