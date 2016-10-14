@@ -79,3 +79,6 @@ ol {
 ol li {
   font-size: 15px;
 }
+p img {
+  width: 100px;
+}
