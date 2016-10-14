@@ -5,9 +5,9 @@
 This webpage is for a brief introduction of the author and to show projects that the author has built.
 
 # program setup instructions
-*Clone this repository.
-*Open index.html and CSS stylesheets.
-*Then open the webpage via a brower of your choice.
+* Clone this repository.
+* Open index.html and CSS stylesheets.
+* Then open the webpage via a brower of your choice.
 
 # link to site on GitHub Pages
 _https://github.com/amy1hwang/portfolio-landing_
