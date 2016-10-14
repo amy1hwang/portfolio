@@ -1,11 +1,15 @@
 
+.container-fluid {
+  margin-left: 30px;
+}
 .col-md-10 {
   padding: 0;
+  margin-bottom: 40px;
 }
 .header {
   text-align: center;
-  background-color: #81E6F2;
-  max-height: 410px;
+  background-color: #8FDDED;
+  max-height: 440px;
   border-top: 30px solid #FC942A;
   border-bottom: 30px solid #FC942A;
 }
@@ -16,6 +20,7 @@
   border-radius: 200px;
 }
 h1 {
+  /*wtf is going on with padding*/
   color: #FC942A;
   font-family: 'Lobster', cursive;
   font-weight: bolder;
@@ -29,9 +34,11 @@ h1 {
   border-right: 10px double #F2AF6A;
   border-top: 30px solid #FC942A;
   border-bottom: 30px solid #FC942A;
-  max-height: 410px;
+  max-height: 440px;
+  margin-bottom: 40px;
 }
 .sidebar {
+  /*mouse hover background change*/
   margin-top: 100px;
   padding-bottom: 106px;
 }
@@ -39,19 +46,36 @@ ul {
   list-style-type: none;
   margin: 15px;
 }
-li {
+ul li {
   font-size: 20px;
   margin: 40px auto;
 }
-
-li a {
+ul li a {
   color: #FC942A;
   font-family: 'Lobster', cursive;
   font-weight: lighter;
 }
 
+.row {
+  margin-left: 30px;
+}
 .panel-info {
   width: 350px;
   margin: 20px;
   float: left;
+  border: medium solid #FC942A;
+}
+.panel-info > .panel-heading {
+  border-color: #FC942A
+}
+p {
+  padding: 10px;
+  text-align: justify;
+}
+ol {
+  padding: 10px;
+  padding-left: 30px;
+}
+ol li {
+  font-size: 15px;
 }
