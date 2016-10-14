@@ -1,4 +1,7 @@
 
+body {
+  background-color: #8FDDED;
+}
 .container-fluid {
   margin-left: 30px;
 }
@@ -8,7 +11,7 @@
 }
 .header {
   text-align: center;
-  background-color: #8FDDED;
+  background-color: #bce8f1;
   max-height: 440px;
   border-top: 30px solid #FC942A;
   border-bottom: 30px solid #FC942A;
@@ -20,7 +23,6 @@
   border-radius: 200px;
 }
 h1 {
-  /*wtf is going on with padding*/
   color: #FC942A;
   font-family: 'Lobster', cursive;
   font-weight: bolder;
@@ -66,19 +68,36 @@ ul li a {
   border: medium solid #FC942A;
 }
 .panel-info > .panel-heading {
-  border-color: #FC942A
+  border-color: #FC942A;
+  color: #FC942A;
+  text-align: center;
 }
 p {
-  padding: 10px;
+  padding: 15px;
   text-align: justify;
 }
+.amy {
+  color: red;
+  font-size: 18px;
+}
+.epicodus {
+  font-weight: bold;
+}
+.maple {
+  color: black;
+}
 ol {
-  padding: 10px;
+  padding: 15px;
   padding-left: 30px;
 }
 ol li {
   font-size: 15px;
 }
+ol li a {
+  padding: 5px;
+  color: gray;
+}
 p img {
   width: 100px;
+  padding: 20px;
 }
