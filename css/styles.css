@@ -40,7 +40,6 @@ h1 {
   margin-bottom: 40px;
 }
 .sidebar {
-  /*mouse hover background change*/
   margin-top: 100px;
   padding-bottom: 106px;
 }
@@ -58,11 +57,9 @@ ul li a {
   font-weight: lighter;
 }
 
-.row {
-  margin-left: 30px;
-}
+
 .panel-info {
-  width: 350px;
+  width: 30%;
   margin: 20px;
   float: left;
   border: medium solid #FC942A;
@@ -72,7 +69,7 @@ ul li a {
   color: #FC942A;
   text-align: center;
 }
-p {
+.aboutme {
   padding: 15px;
   text-align: justify;
 }
@@ -97,7 +94,19 @@ ol li a {
   padding: 5px;
   color: gray;
 }
-p img {
+.contact {
+  text-align: center;
+}
+.contact img {
   width: 100px;
-  padding: 20px;
+  padding: 15px;
+}
+.copyright {
+  background-color: lightblue;
+  margin: 20px 350px;
+  text-align: center;
+  float:none;
+  color: gray;
+  font-size: 13px;
+  font-family: monospace;
 }
