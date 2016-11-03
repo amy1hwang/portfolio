@@ -115,3 +115,9 @@ ol li a {
   font-size: 13px;
   font-family: monospace;
 }
+
+#mapid {
+  margin: auto;
+  width: 500px;
+  height: 500px;
+}
