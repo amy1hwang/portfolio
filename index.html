@@ -1,70 +1,78 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css" />
+    <!-- <link href="css/bootstrap.css" rel="stylesheet" type="text/css"> -->
     <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-    <script src="js/jquery-3.1.1.min.js"></script>
-    <script src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet">    <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/scripts.js"></script>
     <title>Amy's Portforlio</title>
   </head>
   <body>
-    <div class="top">
+    <div class="header">
+      <a href="/" class="menu"><svg class="logo" width="127.5px" height="36px" viewBox="611 33 170 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+          <desc>Created with Sketch.</desc>
+          <defs></defs>
+          <path d="M675.047194,67.392936 L675.047194,60.500938 L664.109501,58.157147 L664.423795,56.6904432 L675.047194,58.966886 L675.047194,33.9153675 L677.486145,33.9153675 L696.522632,45.0243597 L715.49577,33.9153675 L717.998071,33.9153675 L717.998071,58.876324 L728.198846,56.6904432 L728.51314,58.157147 L717.998071,60.410376 L717.998071,67.392936 L728.25,67.392936 L728.25,68.892936 L717.998071,68.892936 L717.998071,80 L716.287638,80 L716.272057,68.892936 L710.25,68.892936 L710.25,67.392936 L716.269953,67.392936 L716.26068,60.782674 L710.423795,62.033435 L710.109501,60.566731 L716.258529,59.249083 L716.225531,35.7257795 L697.157369,46.8031202 L695.857464,46.5815594 L676.757627,35.7257795 L676.757627,59.333407 L682.51314,60.566731 L682.198846,62.033435 L676.757627,60.867459 L676.757627,67.392936 L681.622641,67.392936 L681.622641,68.892936 L676.757627,68.892936 L676.757627,80 L675.047194,80 L675.047194,68.892936 L665.122641,68.892936 L665.122641,67.392936 L675.047194,67.392936 Z M642.584158,66.231583 L631.30797,35.5341797 L620.000106,66.231583 L614.868807,80 L613,80 L630.262705,33.9153675 L632.353234,33.9153675 L649.615939,80 L647.747133,80 L642.584158,66.231583 Z M772.584158,47.6837845 L777.747133,33.9153675 L779.615939,33.9153675 L762.353234,80 L760.262705,80 L743,33.9153675 L744.868807,33.9153675 L750.000106,47.6837845 L761.30797,78.381188 L772.584158,47.6837845 Z" id="Combined-Shape" stroke="#FFFFFF" stroke-width="1.5" fill="#FFFFFF" fill-rule="nonzero"></path>
+      </svg></a>
+      <nav>
+        <a href="#about" class="menu">About</a>
+        <a href="#projects" class="menu">Projects</a>
+        <a href="#contact" class="menu">Contact</a>
+      </nav>
+    </div>
 
-      <div class="col-md-2">
-        <div class="sidebar">
-          <ul>
-            <li><a href="http://www.epicodus.com/">Epicodus</a></li>
-            <li><a href="https://github.com/">Github</a></li>
-            <li><a href="http://getbootstrap.com/">Bootstrap</a></li>
-          </ul>
-        </div>
+    <div class="main">
+      <h1 class="intro">Amy Hwang<br>Juinor Front-End Developer. Doodler. Tea Drinker. Cat Lady.</h1>
+    </div>
+
+    <div class="about" name="about">
+      <div class="down">
+        <a href="#" class="scroll-down-coral">Find out more about Amy</a>
+        <div class="arrow-down-white"></div>
       </div>
-
-      <div class="col-md-10">
-        <div class= "header">
-          <img src="img/me.jpg" alt="a photo of Amy Hwang">
-          <h1>Amy Hwang</h1>
+      <div class="max-width">
+        <div class="me">
+          <div class="left">
+            <img src="img/profile.jpg" class="profile">
+          </div>
+          <div class="right">
+            <p class="about-me">Korean native, <span class="name">Amy Hwang</span> is a junior web developer
+              who has studied in the CSS/Design track at Epicodus. She enjoys the challenge of creating
+              visually engaging websites. Before coding, she was a music teacher at various schools in New York City.
+              Amy describes herself as creative, highly empathetic, and dorky. When she's not coding or sipping tea,
+              she can be found playing with her cat, Maple.
+            </p>
+          </div>
+        </div>
+        <div class="maple">
+          <div class="left">
+            <img src="img/mapesthecat.png" class="profile">
+          </div>
+          <div class="right">
+            <p class="about-me"><span class="name">Maple </span> the cat is Amy's partner in crime and the creative consultant of all the projects.
+            </p>
+          </div>
         </div>
       </div>
     </div>
-
-    <div class="container-fluid">
-        <div class="panel panel-info">
-          <div class="panel-heading">
-            <h3>About Me</h3>
-          </div>
-          <p class="aboutme"><span class="amy"><strong><em>Amy Hwang</em></strong></span> studied music education at New York Univerty. After three years of teaching music at urban elementary schools in New York City, Amy decided that she wanted a career change. As much as she loved music and teaching music, Amy has enjoyed exploring the webs and started showing interests in web developing. Amy is currently living in Portland and attending <span class="epicodus">Epicodus</span> with the hope of becoming a phenomenal web developer.
-          <br>Amy loves listening to music, spending times with her cat <a class="maple" href="https://www.instagram.com/mapesthecat/"><strong>Maple</strong></a>, and exploring the city. She also is a pro couch potato who loves watching Netflix all day!</p>
-        </div>
-        <div class="panel panel-info">
-          <div class="panel-heading">
-            <h3>Projects</h3>
-          </div>
-          <ol>
-            <li><a href="https://amy1hwang.github.io/cupcake/">Cupcake Shop</a></li>
-            <li><a href="https://amy1hwang.github.io/maple">Maple the Cat</a></li>
-            <li><a href="https://amy1hwang.github.io/houseremodeling">House Modeling</a></li>
-            <li><a href="https://amy1hwang.github.io/animal-shelter/">Animal Shelter</a></li>
-            <li><a href="https://amy1hwang.github.io/vacation-site">Vacation</a></li>
-            <li><a href="https://amy1hwang.github.io/wikirebuild">Wikipedia Rebuild</a></li>
-          </ol>
-        </div>
-        <div class="panel panel-info">
-          <div class="panel-heading">
-            <h3>Contact<h3>
-          </div>
-          <div class="contact">
-            <a href="https://www.google.com/maps/place/400+SW+Sixth+Avenue,+400+SW+6th+Ave,+Portland,+OR+97204/@45.5206573,-122.6795664,17z/data=!3m1!4b1!4m5!3m4!1s0x54950a043c17662b:0xbbb4fbbe572d40d7!8m2!3d45.5206536!4d-122.6773777"><img src="img/address.png" alt="email icon"><a>
-              <a href="mailto:amyhwang1218@gmail.com"><img src="img/email.png" alt="email icon"></a>
-              <a href="https://www.instagram.com/ameslovesnyc/"><img src="img/instagram.png" alt="instagram"></a>
-            </div>
-        </div>
+    <div class="projects" name="projects">
+      <div class="down">
+        <a href="#" class="scroll-down-white">View Projects</a>
+        <div class="arrow-down-coral"></div>
       </div>
-    <!-- </div> -->
-    <div id="mapid"></div>
-    <p class="copyright">Copyright 2016 - amy1hwang.github.io/portfolio-landing/</p>
+      <div class="max-width">
+
+      </div>
+    </div>
+    <div class="contact" name="contact">
+      <div class="down">
+        <a href="#" class="scroll-down-coral">Contact Amy</a>
+        <div class="arrow-down-white"></div>
+      </div>
+      <div class="max-width">
+
+      </div>
+    </div>
   </body>
 </html>
