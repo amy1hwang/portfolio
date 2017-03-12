@@ -1,0 +1,62 @@
+@mixin noralize {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+
+@mixin max-width {
+  .max-width {
+    max-width: 1440px;
+  }
+}
+
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin uppercase($letter-space) {
+  text-transform: uppercase;
+  letter-spacing: $letter-space;
+}
+
+@mixin container($bg, $padding) {
+  background: $bg;
+  position: relative;
+  width: 100%;
+  padding: $padding;
+}
+
+@mixin font($color, $family, $align, $size, $weight) {
+  color: $color;
+  font-family: $family;
+  text-align: $align;
+  font-size: $size,;
+  font-weight: $weight;
+}
+
+@mixin font-space($letter-space, $line-height) {
+  letter-spacing: $letter-space;
+  line-height: $line-height;
+}
+
+@mixin size($width, $height, $margin, $padding) {
+  width: $width;
+  height: $height;
+  margin: $margin;
+  padding: $padding;
+}
+
+@mixin anchor {
+  text-decoration: none;
+}
+@mixin arrow($color) {
+  @include size(0, 0, auto, null);
+  margin-top: 35px;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid $color;
+}

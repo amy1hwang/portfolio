@@ -9,27 +9,24 @@
   </head>
   <body>
     <div class="header">
-      <a href="/" class="menu"><svg class="logo" width="127.5px" height="36px" viewBox="611 33 170 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-          <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
-          <desc>Created with Sketch.</desc>
-          <defs></defs>
+      <a href="" class="menu"><svg class="logo" width="127.5px" height="36px" viewBox="611 33 170 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <path d="M675.047194,67.392936 L675.047194,60.500938 L664.109501,58.157147 L664.423795,56.6904432 L675.047194,58.966886 L675.047194,33.9153675 L677.486145,33.9153675 L696.522632,45.0243597 L715.49577,33.9153675 L717.998071,33.9153675 L717.998071,58.876324 L728.198846,56.6904432 L728.51314,58.157147 L717.998071,60.410376 L717.998071,67.392936 L728.25,67.392936 L728.25,68.892936 L717.998071,68.892936 L717.998071,80 L716.287638,80 L716.272057,68.892936 L710.25,68.892936 L710.25,67.392936 L716.269953,67.392936 L716.26068,60.782674 L710.423795,62.033435 L710.109501,60.566731 L716.258529,59.249083 L716.225531,35.7257795 L697.157369,46.8031202 L695.857464,46.5815594 L676.757627,35.7257795 L676.757627,59.333407 L682.51314,60.566731 L682.198846,62.033435 L676.757627,60.867459 L676.757627,67.392936 L681.622641,67.392936 L681.622641,68.892936 L676.757627,68.892936 L676.757627,80 L675.047194,80 L675.047194,68.892936 L665.122641,68.892936 L665.122641,67.392936 L675.047194,67.392936 Z M642.584158,66.231583 L631.30797,35.5341797 L620.000106,66.231583 L614.868807,80 L613,80 L630.262705,33.9153675 L632.353234,33.9153675 L649.615939,80 L647.747133,80 L642.584158,66.231583 Z M772.584158,47.6837845 L777.747133,33.9153675 L779.615939,33.9153675 L762.353234,80 L760.262705,80 L743,33.9153675 L744.868807,33.9153675 L750.000106,47.6837845 L761.30797,78.381188 L772.584158,47.6837845 Z" id="Combined-Shape" stroke="#FFFFFF" stroke-width="1.5" fill="#FFFFFF" fill-rule="nonzero"></path>
       </svg></a>
-      <nav>
-        <a href="#about" class="menu">About</a>
-        <a href="Resume-Amy Hwang.pdf" class="menu">Resume</a>
-        <a href="#projects" class="menu">Projects</a>
-        <a href="#contact" class="menu">Contact</a>
-      </nav>
     </div>
+    <nav>
+      <a href="#about" class="menu to-about">About</a>
+      <a target="_blank" href="Resume-Amy Hwang.pdf" class="menu">Resume</a>
+      <a href="#projects" class="menu to-projects">Projects</a>
+      <a href="#contact" class="menu to-contact">Contact</a>
+    </nav>
 
     <div class="main">
       <h1 class="intro">Amy Hwang<br>Juinor Front-End Developer. Doodler. Tea Drinker. Cat Lady.</h1>
     </div>
 
-    <div class="about" name="about">
+    <div class="about" id="about" name="about">
       <div class="down">
-        <a href="#" class="scroll-down-coral">Find out more about Amy</a>
+        <a href="#" class="scroll-down-coral to-about">Find out more about Amy</a>
         <div class="arrow-down-white"></div>
       </div>
       <div class="max-width">
@@ -51,44 +48,45 @@
             <img src="img/mapesthecat.png" class="profile">
           </div>
           <div class="right">
-            <p class="about-me"><span class="name">Maple </span> the cat is Amy's partner in crime and the creative consultant of all the projects.
+            <p class="about-me"><span class="name">Maple the cat </span> is Amy's partner in crime and
+              the creative consultant of all the projects. The chatty feline loves wet food, cuddling and sitting on black shirts.
             </p>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="projects" name="projects">
+    <div class="projects" id="projects" name="projects">
       <div class="down">
-        <a href="#" class="scroll-down-white">View Projects</a>
+        <a href="#" class="scroll-down-white to-projects">View Projects</a>
         <div class="arrow-down-coral"></div>
       </div>
       <div class="max-width">
         <div class="row">
           <h4>Development Projects</h4>
           <div class="grid">
-            <a href="#"class="project">
+            <a target="_blank" href="https://amy1hwang.github.io/spread-on-me" class="project">
               <img src="img/spreadonme.jpg" alt="" class="project-img">
               <div class="project-desc">
                 <h5 class="title">Spread On Me</h5>
                 <p class="detail">This project is a mock subscription-based e-commerce website for a flavored butter company.</p>
               </div>
             </a>
-            <a href="#"class="project">
+            <a target="_blank" href="https://amy1hwang.github.io/arctic-wild/"class="project">
               <img src="img/articwild.jpg" alt="" class="project-img">
               <div class="project-desc">
                 <h5 class="title">Artic Wild</h5>
                 <p class="detail">This project is one of the Epicodus projects that require replicating an existing websit using CSS.</p>
               </div>
             </a>
-            <a href="#"class="project">
+            <a target="_blank" href="https://amy1hwang.github.io/starter-pokemon"class="project">
               <img src="img/pokemon.jpg" alt="" class="project-img">
               <div class="project-desc">
                 <h5 class="title">Starter Pokemon</h5>
                 <p class="detail">This is a fake webpage where you can pick a first-generation starter pokemon. Who do you choose?</p>
               </div>
             </a>
-            <a href="#"class="project">
+            <a target="_blank" href="https://github.com/amy1hwang/meal-tracker"class="project">
               <img src="img/mealtracker.jpg" alt="" class="project-img">
               <div class="project-desc">
                 <h5 class="title">Meal Tracker</h5>
@@ -100,21 +98,21 @@
         <div class="row">
           <h4>Design Projects</h4>
           <div class="grid">
-            <a href="#" class="project">
+            <a target="_blank" href="https://invis.io/Y2AP13BFH" class="project">
               <img src="img/grovemade.jpg" alt="" class="project-img">
               <div class="project-desc">
                 <h5 class="title">Grove Made:<br>Desk Collection</h5>
-                <p class="detail">This is a prototype for Grove Made Desk Collection site.<br>The development is currently in process.</p>
+                <p class="detail">This is a prototype for the GroveMade Desk Collection e-commerce site.<br>The development is currently in process.</p>
               </div>
             </a>
-            <a href="#" class="project">
+            <a target="_blank" href="https://amy1hwang.github.io/redesign-instagram" class="project">
               <img src="img/instagram.jpg" alt="" class="project-img">
               <div class="project-desc">
                 <h5 class="title">Instagram Redesign</h5>
                 <p class="detail">This project is a mockup of a redesign of the Instagram's desktop version</p>
               </div>
             </a>
-            <a href="#" class="project">
+            <a target="_blank" href="https://invis.io/3KAKSAP5W" class="project">
               <img src="img/togwork.jpg" alt="" class="project-img">
               <div class="project-desc">
                 <h5 class="title">TogWork</h5>
@@ -126,30 +124,41 @@
       </div>
     </div>
 
-    <div class="contact" name="contact">
+    <div class="contact" id="contact" name="contact">
       <div class="down">
-        <a href="#" class="scroll-down-coral">Contact Amy</a>
+        <a href="#" class="scroll-down-coral to-contact">Contact Amy</a>
         <div class="arrow-down-white"></div>
       </div>
       <div class="max-width">
-        <div class="inline">
+        <a class="inline">
           <svg class="contact-icon" enable-background="new 0 0 32 32" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Style_2"><g><path d="M16,0C7.163,0,0,7.163,0,16c0,8.836,7.163,16,16,16s16-7.164,16-16C32,7.163,24.837,0,16,0z" fill="white"/></g><g><polygon fill="rgb(82, 86, 89)" points="6.518,21.815 11.707,15.291 6.518,12.119   "/><polygon fill="rgb(82, 86, 89)" points="19.5,15.746 15.989,17.908 12.472,15.758 7.11,22.5 24.867,22.5   "/><polygon fill="rgb(82, 86, 89)" points="15.988,16.864 25.482,11.017 25.482,9.5 6.518,9.5 6.518,11.076   "/><polygon fill="rgb(82, 86, 89)" points="20.263,15.276 25.482,21.843 25.482,12.062   "/></g></g></svg>
           <h3>amyhwang1218@gmail.com</h3>
-        </div>
-        <div class="inline">
+        </a>
+        <a class="inline" target="_blank" href="https://github.com/amy1hwang">
           <svg class="contact-icon" enable-background="new 0 0 64 64" version="1.1" viewBox="0 0 64 64" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Layer_3"><g><g><path d="M32,0C14.327,0,0,14.327,0,32c0,17.673,14.327,32,32,32s32-14.327,32-32C64,14.327,49.673,0,32,0z" fill="white"/></g></g><g id="Outline_Filled"><path d="M38.592,50.166h-4.84h-4.844c0,0,0.014-2.874,0-4.844c-6.629,1.428-8.479-3.633-8.479-3.633    c-1.21-2.423-2.423-3.633-2.423-3.633c-2.423-1.438,0-1.21,0-1.21c2.423,0,3.633,2.423,3.633,2.423    c2.126,3.609,5.908,3.028,7.266,2.423c0-1.21,0.53-3.042,1.21-3.633c-5.29-0.595-9.693-3.633-9.693-9.689s1.216-7.266,2.427-8.479    c-0.244-0.597-1.259-2.805,0.037-6.056c0,0,2.38,0,4.803,3.633c1.2-1.2,4.844-1.21,6.056-1.21c1.208,0,4.854,0.01,6.054,1.21    c2.423-3.633,4.809-3.633,4.809-3.633c1.296,3.251,0.282,5.459,0.037,6.056c1.21,1.21,2.423,2.423,2.423,8.479    s-4.397,9.092-9.689,9.689c0.682,0.591,1.21,2.675,1.21,3.633L38.592,50.166L38.592,50.166z" fill="rgb(82, 86, 89)" id="Cat_3_"/></g></g></svg>
-          <h3>github.com/amy1hwang<h3>
-        </div>
-        <div class="inline">
+          <h3>github.com/amy1hwang</h3>
+        </a>
+        <a class="inline" target="_blank" href="https://www.linkedin.com/in/amy1hwang">
           <svg class="contact-icon" enable-background="new 0 0 32 32" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Flat_copy"><g><path d="M16,0C7.163,0,0,7.163,0,16c0,8.836,7.163,16,16,16s16-7.164,16-16C32,7.163,24.837,0,16,0z" fill="white"/></g><path d="M24.294,22.942v-6.137c0-3.288-1.755-4.818-4.096-4.818c-1.889,0-2.735,1.039-3.206,1.768v-1.517h-3.558   c0.047,1.005,0,10.704,0,10.704h3.558v-5.978c0-0.319,0.023-0.639,0.117-0.867c0.257-0.639,0.842-1.301,1.825-1.301   c1.288,0,1.803,0.981,1.803,2.42v5.727L24.294,22.942L24.294,22.942z M9.685,10.777c1.24,0,2.013-0.823,2.013-1.85   c-0.023-1.05-0.773-1.849-1.99-1.849S7.696,7.877,7.696,8.927c0,1.028,0.772,1.85,1.967,1.85H9.685z M11.464,22.942V12.238H7.907   v10.704H11.464z" fill="rgb(82, 86, 89)"/></g></svg>
-          <h3>www.linkedin.com/in/amy1hwang<h3>
-        </div>
-        <div class="inline">
+          <h3>www.linkedin.com/in/amy1hwang</h3>
+        </a>
+        <a class="inline" target="_blank" href="https://instagram.com/ameslovesnyc">
           <svg class="contact-icon" enable-background="new 0 0 32 32" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Flat_copy"><g><path d="M16,0C7.163,0,0,7.163,0,16c0,8.836,7.163,16,16,16s16-7.164,16-16C32,7.163,24.837,0,16,0z" fill="white"/></g><path d="M22.057,7.93H9.943c-1.14,0-2.019,0.879-2.019,2.019v12.113c0,1.14,0.879,2.019,2.019,2.019h12.113   c1.14,0,2.019-0.879,2.019-2.019V9.949C24.076,8.808,23.196,7.93,22.057,7.93z M16.012,12.833c1.791,0,3.243,1.407,3.243,3.142   c0,1.735-1.452,3.142-3.243,3.142c-1.79,0-3.242-1.408-3.242-3.142C12.77,14.239,14.222,12.833,16.012,12.833z M22.057,21.557   c0,0.354-0.151,0.505-0.505,0.505H10.448c-0.353,0-0.505-0.151-0.505-0.505v-7.066l1.258,0.274   c-0.135,0.439-0.208,0.903-0.208,1.385c0,2.684,2.248,4.863,5.018,4.863c2.772,0,5.019-2.178,5.019-4.863   c0-0.482-0.073-0.946-0.208-1.385l1.234-0.274V21.557z M22.057,12.472c0,0.279-0.226,0.505-0.505,0.505h-2.019   c-0.279,0-0.505-0.226-0.505-0.505v-2.019c0-0.279,0.226-0.505,0.505-0.505h2.019c0.279,0,0.505,0.226,0.505,0.505V12.472z" fill="rgb(82, 86, 89)"/></g></svg>
-          <h3>@ameslovesnyc/<h3>
-        </div>
+          <h3>@ameslovesnyc/</h3>
+        </a>
       </div>
       <footer>Copyright (c) 2017 Amy Hwang All Rights Reserved.</footer>
     </div>
+    <a href='' class="to-the-top">
+      <svg width="18px" height="12px" viewBox="44 76 18 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g id="to-the-top-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(45.000000, 77.000000)">
+              <g id="up" stroke="#000000" fill-rule="nonzero" fill="#000000">
+                  <path d="M1.75257669,9.65850461 L8.75257669,1.65850461 C9.11625875,1.24286798 9.07414124,0.611105358 8.65850461,0.247423305 C8.24286798,-0.116258747 7.61110536,-0.0741412394 7.24742331,0.341495392 L0.247423305,8.34149539 C-0.116258747,8.75713202 -0.0741412394,9.38889464 0.341495392,9.75257669 C0.757132024,10.1162587 1.38889464,10.0741412 1.75257669,9.65850461 Z" id="Line"></path>
+                  <path d="M15.7525767,8.34149539 L8.75257669,0.341495392 C8.38889464,-0.0741412394 7.75713202,-0.116258747 7.34149539,0.247423305 C6.92585876,0.611105358 6.88374125,1.24286798 7.24742331,1.65850461 L14.2474233,9.65850461 C14.6111054,10.0741412 15.242868,10.1162587 15.6585046,9.75257669 C16.0741412,9.38889464 16.1162587,8.75713202 15.7525767,8.34149539 Z" id="Line-Copy"></path>
+              </g>
+          </g>
+      </svg>
+      to the top
+    </a>
   </body>
 </html>

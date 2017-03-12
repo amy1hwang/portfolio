@@ -1,0 +1,221 @@
+@import "variables";
+@import "mixins";
+
+@include noralize;
+
+@include max-width;
+
+.scroll-down-coral {
+  @include anchor;
+  @include font($coral, $roboto-con, center, null, null);
+  margin: auto;
+}
+
+.scroll-down-white {
+  @include anchor;
+  @include font(white, $roboto-con, center, null, null);
+  margin: auto;
+}
+
+.arrow-down-white {
+  @include arrow(white);
+}
+
+.arrow-down-coral {
+  @include arrow($coral);
+}
+
+.header {
+  @include size(100%, 100px, null, 40px 0 40px 0);
+  @include center;
+  background: $coral;
+  flex-direction: column;
+}
+
+nav {
+  height: 40px;
+  background: $coral;
+  max-width: 1440px;
+  @include size(100%, null, null, 0 10%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fixed {
+  z-index: 2;
+  margin-top: 0;
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  background: darken(rgba($coral, .7), 10%);
+}
+
+.menu {
+  @include anchor;
+  @include uppercase(2px);
+  font-family: $roboto-con;
+  color: white;
+}
+
+.main {
+  @include size(100%, calc(100vh - 160px), null, null);
+  max-width: 100%;
+  @include center;
+}
+
+.intro {
+  @include font($gray, $roboto, center, 1.6em, 300);
+  @include font-space(null, 1.8em);
+  margin: auto;
+}
+
+.about {
+  @include container($coral, 70px 50px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.down {
+  height: 70px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -78%);
+}
+
+.me, .maple {
+  display: flex;
+}
+
+.left {
+  @include size(40%, null, null, 20px 30px);
+}
+
+.profile {
+  float: right;
+  width: 300px;
+}
+
+.right {
+  @include size(60%, null, null, 20px);
+  display: flex;
+  align-items: center;
+}
+
+.about-me {
+  @include font(white, $roboto, left, 1em, .5px);
+  @include font-space(null, 1.6em);
+  width: 85%;
+}
+
+.name {
+  @include uppercase(1px);
+  font-size: 1.3em;
+}
+
+
+.projects {
+  @include container(white, 80px 50px);
+}
+
+h4 {
+  @include font(#555555, $roboto, null, 1.5em, null);
+  @include uppercase(2px);
+}
+
+.row {
+  padding: 10px 0;
+  margin-bottom: 30px;
+}
+
+.grid {
+  margin: 30px 0 10px;
+  display: flex;
+}
+
+.project {
+  @include size(300px, 300px, null, null);
+  @include anchor;
+  margin-right: 25px;
+  position: relative;
+}
+
+.project-img {
+  position: absolute;
+  top: 0;
+  @include size(100%, 100%, null, null);
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity .5s;
+}
+
+.project-img:hover {
+  opacity: 1;
+}
+
+.project-desc {
+  @include size(100%, 100%, null, 50px 25px);
+  background: #333333;
+  text-align: center;
+}
+
+
+.title {
+  @include font($coral, $roboto-con, null, 1.4em, 400);
+  @include font-space(null, 1.6em);
+  @include uppercase(2px);
+  @include anchor;
+}
+
+.detail {
+  @include font(white, $roboto, null, .85em, null);
+  @include font-space(.3px, 1.6em);
+  margin-top: 35px;
+}
+
+.contact {
+  @include container($gray, 50px 0 10px 100px);
+}
+
+.inline {
+  width: 50%;
+  margin: 30px;
+  display: flex;
+  align-items: center;
+  @include anchor;
+}
+
+.contact-icon {
+  @include size(50px, 50px, null, null);
+}
+
+h3 {
+  @include font(white, $roboto, null, 1.1em, 200);
+  @include font-space(.5px, null);
+  margin-left: 20px;
+  @include anchor;
+}
+
+footer {
+  @include font(white, $roboto, center, .8em, 100);
+  @include font-space(.5px, null);
+  margin-top: 50px;
+}
+
+.to-the-top {
+  display: none;
+  bottom: 30px;
+  right: 35px;
+  position: fixed;
+  svg {
+    display: block;
+    margin: auto;
+    margin-bottom: 15px;
+  }
+  @include font(black, $roboto-con, center, .6em, 400);
+  @include anchor;
+  @include uppercase(1px);
+  }
