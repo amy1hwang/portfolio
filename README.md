@@ -10,7 +10,7 @@ This webpage is for a brief introduction of the author and to show projects that
 * Then open the webpage via a brower of your choice.
 
 # link to site on GitHub Pages
-_https://github.com/amy1hwang/portfolio
+https://amy1hwang.github.io/portfolio
 
 # copyright and license information
 Copyright (c) 2016 Amy Hwang. This software is licensed under the Github license.
