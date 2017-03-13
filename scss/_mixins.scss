@@ -9,6 +9,7 @@
 @mixin max-width {
   .max-width {
     max-width: 1440px;
+    margin: auto;
   }
 }
 
@@ -55,7 +56,7 @@
 }
 @mixin arrow($color) {
   @include size(0, 0, auto, null);
-  margin-top: 35px;
+  margin-top: 33px;
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
   border-top: 20px solid $color;

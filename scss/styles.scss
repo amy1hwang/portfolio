@@ -35,12 +35,29 @@
 nav {
   height: 40px;
   background: $coral;
-  max-width: 1440px;
+  width: 100%;
   @include size(100%, null, null, 0 10%);
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media #{$break-small} {
+    padding: 0 10px;
+  }
 }
+
+.menu {
+  @include anchor;
+  @include uppercase(2px);
+  font-family: $roboto-con;
+  color: white;
+  transition: all .5s;
+  @media #{$break-xsmall} {
+    font-size: .8em;
+  }
+}
+
+
+//addClass
 
 .fixed {
   z-index: 2;
@@ -49,15 +66,26 @@ nav {
   top:0;
   left:0;
   width: 100%;
-  background: darken(rgba($coral, .7), 10%);
+  background: rgba($coral, 1);
+  transition: all .5s;
 }
 
-.menu {
-  @include anchor;
-  @include uppercase(2px);
-  font-family: $roboto-con;
-  color: white;
+.reverse {
+  z-index: 2;
+  margin-top: 0;
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  background: rgba(white, 1);
+  .menu {
+    color: $coral;
+    transition: all .5s;
+  }
+  transition: all .5s;
 }
+
+//addClass End
 
 .main {
   @include size(100%, calc(100vh - 160px), null, null);
@@ -69,14 +97,41 @@ nav {
   @include font($gray, $roboto, center, 1.6em, 300);
   @include font-space(null, 1.8em);
   margin: auto;
+  @media #{$break-xsmall} {
+    font-size: 1.4em;
+    line-height: 1.6em;
+  }
+}
+
+.sub-intro {
+  @media #{$break-large} {
+    font-size: .8em;
+  }
+  @media #{$break-small} {
+    font-size: .65em;
+  }
+  @media #{$break-xsmall} {
+    font-size: .6em;
+  }
 }
 
 .about {
-  @include container($coral, 70px 50px);
+  @include container($coral, 70px 100px);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  align-items: center;
+  @media #{$break-large} {
+    padding: 70px;
+  }
+  @media #{$break-medium} {
+    padding: 70px 45px;
+  }
+  @media #{$break-small} {
+    padding: 70px 25px;
+  }
 }
+
 
 .down {
   height: 70px;
@@ -87,28 +142,46 @@ nav {
 }
 
 .me, .maple {
-  display: flex;
-}
-
-.left {
-  @include size(40%, null, null, 20px 30px);
+  max-width: 130  0px;
+  margin: 40px 0 50px;
+  @include center;
+  @media #{$break-small} {
+    display: block;
+  }
 }
 
 .profile {
-  float: right;
-  width: 300px;
-}
-
-.right {
-  @include size(60%, null, null, 20px);
-  display: flex;
-  align-items: center;
+  max-width: 300px;
+  min-width: 200px;
+  width: 35%;
+  height: auto;
+  margin-right: 30px;
+  @media #{$break-small} {
+    max-width: 3000px;
+    width: 100%;
+  }
 }
 
 .about-me {
   @include font(white, $roboto, left, 1em, .5px);
   @include font-space(null, 1.6em);
-  width: 85%;
+  display: inline-block;
+  width: 65%;
+  @media #{$break-large} {
+    font-size: .85em;
+  }
+  @media #{$break-medium} {
+    font-size: .8em;
+    width: 100%;
+    margin: auto;
+  }
+  @media #{$break-small} {
+    min-width: 200px;
+    text-align: justify;
+    padding-bottom: 20px;
+    font-size: .9em;
+
+  }
 }
 
 .name {
@@ -118,12 +191,26 @@ nav {
 
 
 .projects {
-  @include container(white, 80px 50px);
+  @include container(white, 80px 100px);
+  @media #{$break-xlarge} {
+    padding: 70px 20px 70px 70px;
+  }
+  @media #{$break-medium} {
+    padding: 70px 45px;
+  }
+  @media #{$break-small} {
+    padding: 0;
+    padding-bottom: 70px;
+  }
 }
 
 h4 {
   @include font(#555555, $roboto, null, 1.5em, null);
   @include uppercase(2px);
+  @media #{$break-small} {
+    padding-top: 60px;
+    text-align: center;
+  }
 }
 
 .row {
@@ -134,13 +221,27 @@ h4 {
 .grid {
   margin: 30px 0 10px;
   display: flex;
+  flex-flow: wrap;
+  @media #{$break-medium} {
+    display: block;
+  }
 }
 
 .project {
-  @include size(300px, 300px, null, null);
+  @include size(290px, 290px, 0 5px 10px 5px, null);
   @include anchor;
-  margin-right: 25px;
   position: relative;
+  @media #{$break-xlarge} {
+    @include size(270px, 270px, null, null);
+  }
+  @media #{$break-large} {
+    @include size(230px, 230px, null, null);
+  }
+  @media #{$break-medium} {
+    @include size(100%, 100px, null, null);
+    margin-bottom: 10px;
+    display: block;
+  }
 }
 
 .project-img {
@@ -150,46 +251,86 @@ h4 {
   object-fit: cover;
   opacity: 0;
   transition: opacity .5s;
+  @media #{$break-medium} {
+    opacity: .1;
+  }
 }
 
 .project-img:hover {
   opacity: 1;
+  @media #{$break-medium} {
+    opacity: .1;
+  }
 }
 
 .project-desc {
-  @include size(100%, 100%, null, 50px 25px);
+  @include size(100%, 100%, null, 45px 25px);
   background: #333333;
   text-align: center;
+  @media #{$break-large} {
+    padding: 25px;
+  }
+  @media #{$break-medium} {
+    padding: 20px;
+  }
+  @media #{$break-small} {
+    padding: 15px;
+  }
 }
-
 
 .title {
   @include font($coral, $roboto-con, null, 1.4em, 400);
   @include font-space(null, 1.6em);
   @include uppercase(2px);
   @include anchor;
+  margin-bottom: 35px;
+  @media #{$break-large} {
+    font-size: 1.2em;
+  }
+}
+
+.dc {
+  display: block;
+  @media #{$break-medium} {
+    display: inline-block;
+  }
 }
 
 .detail {
   @include font(white, $roboto, null, .85em, null);
   @include font-space(.3px, 1.6em);
-  margin-top: 35px;
+  @media #{$break-large} {
+    margin-top: 15px;
+  }
+  @media #{$break-medium} {
+    margin-top: 5px;
+    font-size: .75em;
+  }
 }
 
 .contact {
-  @include container($gray, 50px 0 10px 100px);
+  @include container($gray, 50px 100px 10px 100px);
+  @media #{$break-medium} {
+    padding: 70px 45px;
+  }
+  @media #{$break-small} {
+    padding: 70px 25px;
+  }
 }
 
 .inline {
-  width: 50%;
   margin: 30px;
-  display: flex;
-  align-items: center;
   @include anchor;
+  display: block;
 }
 
 .contact-icon {
+  display: inline-block;
   @include size(50px, 50px, null, null);
+  vertical-align: middle;
+  @media #{$break-small} {
+    @include size(30px, 30px, null, null);
+  }
 }
 
 h3 {
@@ -197,6 +338,13 @@ h3 {
   @include font-space(.5px, null);
   margin-left: 20px;
   @include anchor;
+  display: inline-block;
+  @media #{$break-medium} {
+    font-size: 1em;
+  }
+  @media #{$break-small} {
+    font-size: .9em;
+  }
 }
 
 footer {

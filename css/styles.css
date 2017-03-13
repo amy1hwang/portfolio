@@ -4,7 +4,8 @@
   box-sizing: border-box; }
 
 .max-width {
-  max-width: 1440px; }
+  max-width: 1440px;
+  margin: auto; }
 
 .scroll-down-coral {
   text-decoration: none;
@@ -24,7 +25,7 @@
   width: 0;
   height: 0;
   margin: auto;
-  margin-top: 35px;
+  margin-top: 33px;
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
   border-top: 20px solid white; }
@@ -33,7 +34,7 @@
   width: 0;
   height: 0;
   margin: auto;
-  margin-top: 35px;
+  margin-top: 33px;
   border-left: 20px solid transparent;
   border-right: 20px solid transparent;
   border-top: 20px solid #FF7676; }
@@ -51,12 +52,26 @@
 nav {
   height: 40px;
   background: #FF7676;
-  max-width: 1440px;
+  width: 100%;
   width: 100%;
   padding: 0 10%;
   display: flex;
   align-items: center;
   justify-content: space-between; }
+  @media only screen and (max-width: 550px) {
+    nav {
+      padding: 0 10px; } }
+
+.menu {
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: "Roboto Condensed", sans-serif;
+  color: white;
+  transition: all .5s; }
+  @media only screen and (max-width: 440px) {
+    .menu {
+      font-size: .8em; } }
 
 .fixed {
   z-index: 2;
@@ -65,14 +80,21 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(255, 67, 67, 0.7); }
+  background: #ff7676;
+  transition: all .5s; }
 
-.menu {
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-family: "Roboto Condensed", sans-serif;
-  color: white; }
+.reverse {
+  z-index: 2;
+  margin-top: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  transition: all .5s; }
+  .reverse .menu {
+    color: #FF7676;
+    transition: all .5s; }
 
 .main {
   width: 100%;
@@ -90,15 +112,39 @@ nav {
   font-weight: 300;
   line-height: 1.8em;
   margin: auto; }
+  @media only screen and (max-width: 440px) {
+    .intro {
+      font-size: 1.4em;
+      line-height: 1.6em; } }
+
+@media only screen and (max-width: 810px) {
+  .sub-intro {
+    font-size: .8em; } }
+@media only screen and (max-width: 550px) {
+  .sub-intro {
+    font-size: .65em; } }
+@media only screen and (max-width: 440px) {
+  .sub-intro {
+    font-size: .6em; } }
 
 .about {
   background: #FF7676;
   position: relative;
   width: 100%;
-  padding: 70px 50px;
+  padding: 70px 100px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around; }
+  justify-content: space-around;
+  align-items: center; }
+  @media only screen and (max-width: 810px) {
+    .about {
+      padding: 70px; } }
+  @media only screen and (max-width: 720px) {
+    .about {
+      padding: 70px 45px; } }
+  @media only screen and (max-width: 550px) {
+    .about {
+      padding: 70px 25px; } }
 
 .down {
   height: 70px;
@@ -108,21 +154,25 @@ nav {
   transform: translate(-50%, -78%); }
 
 .me, .maple {
-  display: flex; }
-
-.left {
-  width: 40%;
-  padding: 20px 30px; }
+  max-width: 130  0px;
+  margin: 40px 0 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  @media only screen and (max-width: 550px) {
+    .me, .maple {
+      display: block; } }
 
 .profile {
-  float: right;
-  width: 300px; }
-
-.right {
-  width: 60%;
-  padding: 20px;
-  display: flex;
-  align-items: center; }
+  max-width: 300px;
+  min-width: 200px;
+  width: 35%;
+  height: auto;
+  margin-right: 30px; }
+  @media only screen and (max-width: 550px) {
+    .profile {
+      max-width: 3000px;
+      width: 100%; } }
 
 .about-me {
   color: white;
@@ -131,7 +181,22 @@ nav {
   font-size: 1em;
   font-weight: 0.5px;
   line-height: 1.6em;
-  width: 85%; }
+  display: inline-block;
+  width: 65%; }
+  @media only screen and (max-width: 810px) {
+    .about-me {
+      font-size: .85em; } }
+  @media only screen and (max-width: 720px) {
+    .about-me {
+      font-size: .8em;
+      width: 100%;
+      margin: auto; } }
+  @media only screen and (max-width: 550px) {
+    .about-me {
+      min-width: 200px;
+      text-align: justify;
+      padding-bottom: 20px;
+      font-size: .9em; } }
 
 .name {
   text-transform: uppercase;
@@ -142,7 +207,17 @@ nav {
   background: white;
   position: relative;
   width: 100%;
-  padding: 80px 50px; }
+  padding: 80px 100px; }
+  @media only screen and (max-width: 1400px) {
+    .projects {
+      padding: 70px 20px 70px 70px; } }
+  @media only screen and (max-width: 720px) {
+    .projects {
+      padding: 70px 45px; } }
+  @media only screen and (max-width: 550px) {
+    .projects {
+      padding: 0;
+      padding-bottom: 70px; } }
 
 h4 {
   color: #555555;
@@ -150,6 +225,10 @@ h4 {
   font-size: 1.5em;
   text-transform: uppercase;
   letter-spacing: 2px; }
+  @media only screen and (max-width: 550px) {
+    h4 {
+      padding-top: 60px;
+      text-align: center; } }
 
 .row {
   padding: 10px 0;
@@ -157,14 +236,32 @@ h4 {
 
 .grid {
   margin: 30px 0 10px;
-  display: flex; }
+  display: flex;
+  flex-flow: wrap; }
+  @media only screen and (max-width: 720px) {
+    .grid {
+      display: block; } }
 
 .project {
-  width: 300px;
-  height: 300px;
+  width: 290px;
+  height: 290px;
+  margin: 0 5px 10px 5px;
   text-decoration: none;
-  margin-right: 25px;
   position: relative; }
+  @media only screen and (max-width: 1400px) {
+    .project {
+      width: 270px;
+      height: 270px; } }
+  @media only screen and (max-width: 810px) {
+    .project {
+      width: 230px;
+      height: 230px; } }
+  @media only screen and (max-width: 720px) {
+    .project {
+      width: 100%;
+      height: 100px;
+      margin-bottom: 10px;
+      display: block; } }
 
 .project-img {
   position: absolute;
@@ -174,16 +271,31 @@ h4 {
   object-fit: cover;
   opacity: 0;
   transition: opacity .5s; }
+  @media only screen and (max-width: 720px) {
+    .project-img {
+      opacity: .1; } }
 
 .project-img:hover {
   opacity: 1; }
+  @media only screen and (max-width: 720px) {
+    .project-img:hover {
+      opacity: .1; } }
 
 .project-desc {
   width: 100%;
   height: 100%;
-  padding: 50px 25px;
+  padding: 45px 25px;
   background: #333333;
   text-align: center; }
+  @media only screen and (max-width: 810px) {
+    .project-desc {
+      padding: 25px; } }
+  @media only screen and (max-width: 720px) {
+    .project-desc {
+      padding: 20px; } }
+  @media only screen and (max-width: 550px) {
+    .project-desc {
+      padding: 15px; } }
 
 .title {
   color: #FF7676;
@@ -193,32 +305,58 @@ h4 {
   line-height: 1.6em;
   text-transform: uppercase;
   letter-spacing: 2px;
-  text-decoration: none; }
+  text-decoration: none;
+  margin-bottom: 35px; }
+  @media only screen and (max-width: 810px) {
+    .title {
+      font-size: 1.2em; } }
+
+.dc {
+  display: block; }
+  @media only screen and (max-width: 720px) {
+    .dc {
+      display: inline-block; } }
 
 .detail {
   color: white;
   font-family: "Roboto", sans-serif;
   font-size: 0.85em;
   letter-spacing: 0.3px;
-  line-height: 1.6em;
-  margin-top: 35px; }
+  line-height: 1.6em; }
+  @media only screen and (max-width: 810px) {
+    .detail {
+      margin-top: 15px; } }
+  @media only screen and (max-width: 720px) {
+    .detail {
+      margin-top: 5px;
+      font-size: .75em; } }
 
 .contact {
   background: #525659;
   position: relative;
   width: 100%;
-  padding: 50px 0 10px 100px; }
+  padding: 50px 100px 10px 100px; }
+  @media only screen and (max-width: 720px) {
+    .contact {
+      padding: 70px 45px; } }
+  @media only screen and (max-width: 550px) {
+    .contact {
+      padding: 70px 25px; } }
 
 .inline {
-  width: 50%;
   margin: 30px;
-  display: flex;
-  align-items: center;
-  text-decoration: none; }
+  text-decoration: none;
+  display: block; }
 
 .contact-icon {
+  display: inline-block;
   width: 50px;
-  height: 50px; }
+  height: 50px;
+  vertical-align: middle; }
+  @media only screen and (max-width: 550px) {
+    .contact-icon {
+      width: 30px;
+      height: 30px; } }
 
 h3 {
   color: white;
@@ -227,7 +365,14 @@ h3 {
   font-weight: 200;
   letter-spacing: 0.5px;
   margin-left: 20px;
-  text-decoration: none; }
+  text-decoration: none;
+  display: inline-block; }
+  @media only screen and (max-width: 720px) {
+    h3 {
+      font-size: 1em; } }
+  @media only screen and (max-width: 550px) {
+    h3 {
+      font-size: .9em; } }
 
 footer {
   color: white;

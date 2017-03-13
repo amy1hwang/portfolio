@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet">    <script src="js/jquery-3.1.1.min.js"></script>
     <script src="js/scripts.js"></script>
     <title>Amy's Portforlio</title>
+    <meta name="viewport" content="width=device-width">
   </head>
   <body>
     <div class="header">
@@ -21,7 +22,7 @@
     </nav>
 
     <div class="main">
-      <h1 class="intro">Amy Hwang<br>Juinor Front-End Developer. Doodler. Tea Drinker. Cat Lady.</h1>
+      <h1 class="intro">Amy Hwang<br><span class='sub-intro'>Juinor Front-End Developer. Doodler. Tea Drinker. Cat Lady.</span></h1>
     </div>
 
     <div class="about" id="about" name="about">
@@ -31,27 +32,19 @@
       </div>
       <div class="max-width">
         <div class="me">
-          <div class="left">
-            <img src="img/profile.jpg" class="profile">
-          </div>
-          <div class="right">
-            <p class="about-me">Korean native, <span class="name">Amy Hwang</span> is a junior web developer
+          <img src="img/profile.jpg" class="profile">
+          <p class="about-me">Korean native, <span class="name">Amy Hwang</span> is a junior web developer
               who has studied in the CSS/Design track at Epicodus. She enjoys the challenge of creating
               visually engaging websites. Before coding, she was a music teacher at various schools in New York City.
               Amy describes herself as creative, highly empathetic, and dorky. When she's not coding or sipping tea,
               she can be found playing with her cat, Maple.
-            </p>
-          </div>
+          </p>
         </div>
         <div class="maple">
-          <div class="left">
-            <img src="img/mapesthecat.png" class="profile">
-          </div>
-          <div class="right">
-            <p class="about-me"><span class="name">Maple the cat </span> is Amy's partner in crime and
-              the creative consultant of all the projects. The chatty feline loves wet food, cuddling and sitting on black shirts.
-            </p>
-          </div>
+          <img src="img/mapesthecat.png" class="profile">
+          <p class="about-me"><span class="name">Maple the cat </span> is Amy's partner in crime and
+            the creative consultant of all the projects. The chatty feline loves wet food, cuddling and sitting on black shirts.
+          </p>
         </div>
       </div>
     </div>
@@ -65,18 +58,18 @@
         <div class="row">
           <h4>Development Projects</h4>
           <div class="grid">
-            <a target="_blank" href="https://amy1hwang.github.io/spread-on-me" class="project">
-              <img src="img/spreadonme.jpg" alt="" class="project-img">
-              <div class="project-desc">
-                <h5 class="title">Spread On Me</h5>
-                <p class="detail">This project is a mock subscription-based e-commerce website for a flavored butter company.</p>
-              </div>
-            </a>
             <a target="_blank" href="https://amy1hwang.github.io/arctic-wild/"class="project">
               <img src="img/articwild.jpg" alt="" class="project-img">
               <div class="project-desc">
                 <h5 class="title">Artic Wild</h5>
                 <p class="detail">This project is one of the Epicodus projects that require replicating an existing websit using CSS.</p>
+              </div>
+            </a>
+            <a target="_blank" href="https://amy1hwang.github.io/redesign-instagram" class="project">
+              <img src="img/instagram.jpg" alt="" class="project-img">
+              <div class="project-desc">
+                <h5 class="title">Instagram Redesign</h5>
+                <p class="detail">This project is a redesign of the Instagram's desktop version</p>
               </div>
             </a>
             <a target="_blank" href="https://amy1hwang.github.io/starter-pokemon"class="project">
@@ -101,15 +94,8 @@
             <a target="_blank" href="https://invis.io/Y2AP13BFH" class="project">
               <img src="img/grovemade.jpg" alt="" class="project-img">
               <div class="project-desc">
-                <h5 class="title">Grove Made:<br>Desk Collection</h5>
+                <h5 class="title">Grove Made: <span class="dc">Desk Collection</span></h5>
                 <p class="detail">This is a prototype for the GroveMade Desk Collection e-commerce site.<br>The development is currently in process.</p>
-              </div>
-            </a>
-            <a target="_blank" href="https://amy1hwang.github.io/redesign-instagram" class="project">
-              <img src="img/instagram.jpg" alt="" class="project-img">
-              <div class="project-desc">
-                <h5 class="title">Instagram Redesign</h5>
-                <p class="detail">This project is a mockup of a redesign of the Instagram's desktop version</p>
               </div>
             </a>
             <a target="_blank" href="https://invis.io/3KAKSAP5W" class="project">
@@ -130,7 +116,7 @@
         <div class="arrow-down-white"></div>
       </div>
       <div class="max-width">
-        <a class="inline">
+        <a class="inline" href="mailto:amyhwnag1218@gmail.com">
           <svg class="contact-icon" enable-background="new 0 0 32 32" version="1.1" viewBox="0 0 32 32" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Style_2"><g><path d="M16,0C7.163,0,0,7.163,0,16c0,8.836,7.163,16,16,16s16-7.164,16-16C32,7.163,24.837,0,16,0z" fill="white"/></g><g><polygon fill="rgb(82, 86, 89)" points="6.518,21.815 11.707,15.291 6.518,12.119   "/><polygon fill="rgb(82, 86, 89)" points="19.5,15.746 15.989,17.908 12.472,15.758 7.11,22.5 24.867,22.5   "/><polygon fill="rgb(82, 86, 89)" points="15.988,16.864 25.482,11.017 25.482,9.5 6.518,9.5 6.518,11.076   "/><polygon fill="rgb(82, 86, 89)" points="20.263,15.276 25.482,21.843 25.482,12.062   "/></g></g></svg>
           <h3>amyhwang1218@gmail.com</h3>
         </a>
@@ -149,7 +135,7 @@
       </div>
       <footer>Copyright (c) 2017 Amy Hwang All Rights Reserved.</footer>
     </div>
-    <a href='' class="to-the-top">
+    <a class="to-the-top">
       <svg width="18px" height="12px" viewBox="44 76 18 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
           <g id="to-the-top-icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(45.000000, 77.000000)">
               <g id="up" stroke="#000000" fill-rule="nonzero" fill="#000000">
