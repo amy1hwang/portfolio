@@ -287,6 +287,12 @@ h4 {
   @media #{$break-large} {
     font-size: 1.2em;
   }
+  @media #{$break-large} {
+    margin-bottom: 15px;
+  }
+  @media #{$break-medium} {
+    margin-bottom: 5px;
+  }
 }
 
 .dc {
@@ -299,11 +305,7 @@ h4 {
 .detail {
   @include font(white, $roboto, null, .85em, null);
   @include font-space(.3px, 1.6em);
-  @media #{$break-large} {
-    margin-top: 15px;
-  }
   @media #{$break-medium} {
-    margin-top: 5px;
     font-size: .75em;
   }
 }
