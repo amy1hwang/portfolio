@@ -48,11 +48,15 @@ nav {
 .menu {
   @include anchor;
   @include uppercase(2px);
-  font-family: $roboto-con;
+  // font-family: $roboto-con;
+  font-family: $futura;
   color: white;
   transition: all .5s;
   @media #{$break-xsmall} {
     font-size: .8em;
+  }
+  &:hover {
+
   }
 }
 
@@ -90,13 +94,27 @@ nav {
 .main {
   @include size(100%, calc(100vh - 160px), null, null);
   max-width: 100%;
-  @include center;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  position: relative
+}
+
+.text-container {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
 }
 
 .intro {
-  @include font($gray, $roboto, center, 1.6em, 300);
-  @include font-space(null, 1.8em);
-  margin: auto;
+  @include font($gray, $futura, center, 3rem, 500);
+  // @include font-space(null, 1.8em);
+  margin-bottom: 30px;
+  @include uppercase(none);
+  text-align: left;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
   @media #{$break-xsmall} {
     font-size: 1.4em;
     line-height: 1.6em;
@@ -104,15 +122,30 @@ nav {
 }
 
 .sub-intro {
+  @include font($gray, $roboto, center, 2.8rem, 300);
+  // margin: 0 10%;
+  // transition: opacity 1200ms linear 50ms; -webkit-transition: opacity 1200ms linear 50ms;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  @media only screen and (min-width: 1300px) {
+    br {
+      display: none;
+    }
+  }
   @media #{$break-large} {
-    font-size: .8em;
+    font-size: 2.1rem;
   }
   @media #{$break-small} {
-    font-size: .65em;
+    font-size: 1.8rem;
   }
   @media #{$break-xsmall} {
-    font-size: .6em;
+    font-size: 1.6rem;
   }
+    text-align: left;
+}
+
+.load {
+  opacity: 1;
 }
 
 .about {

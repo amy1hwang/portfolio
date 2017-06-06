@@ -16,6 +16,9 @@ $(function() {
       };
   });
 
+  $('.intro').addClass('load');
+  // $('.intro').fadeIn(400);
+  $('.sub-intro').addClass('load');
 
   //scroll to the next section
   $('.to-about').click(function() {
