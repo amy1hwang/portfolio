@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script type='application/javascript' src='/scripts/fastclick.js'></script>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="styles/styles.css">
 	<script src="https://cdn.auth0.com/js/lock/10.14/lock.min.js"></script>
@@ -17,288 +18,315 @@
 </head>
 <body>
 	<div class="menu fixed">
-		<div class="menu-items">
-			<a href="">
-				<span class="menu-item">
-					<span class="before">about</span>
-					<span class="real-content">about</span>
-					<span class="after">about</span></span>
-			</a>
-		</div>
+		<div class="menu-container">
+			<div class="mobile-nav">
+				<div class="hamburger"></div>
+				<div class="hamburger"></div>
+				<div class="hamburger"></div>
+			</div>
+			<div class="menu-items">
+				<a href="#goto-about">
+					<span class="menu-item">
+						<span class="before">about</span>
+						<span class="real-content">about</span>
+						<span class="after">about</span></span>
+				</a>
+			</div>
 
-		<div class="menu-items">
-			<a href="">
-				<span class="menu-item">
-					<span class="before">projects</span>
-					<span class="real-content">projects</span>
-					<span class="after">projects</span>
-				</span>
-			</a>
-		</div>
+			<div class="menu-items">
+				<a href="#goto-projects">
+					<span class="menu-item">
+						<span class="before">projects</span>
+						<span class="real-content">projects</span>
+						<span class="after">projects</span>
+					</span>
+				</a>
+			</div>
 
-		<div class="menu-items">
-			<a href="">
-				<span class="menu-item">
-					<span class="before">contact</span>
-					<span class="real-content">contact</span>
-					<span class="after">contact</span>
-				</span>
-			</a>
-		</div>
-
-		<div>	
-
+			<div class="menu-items">
+				<a href="#goto-contact">
+					<span class="menu-item">
+						<span class="before">contact</span>
+						<span class="real-content">contact</span>
+						<span class="after">contact</span>
+					</span>
+				</a>
+			</div>
 		</div>
 	</div>
-	<div class="section landing">
+	<div id="landing" name"landing" class="section landing">
 		<div class="logo">
-			<svg class="logo-element a" width="162px" height="203px" viewBox="0 0 162 203" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-			    <!-- Generator: Sketch 45 (43475) - http://www.bohemiancoding.com/sketch -->
-			    <desc>Created with Sketch.</desc>
-			    <defs></defs>
-			    <g id="aa" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-			        <g id="Desktop-HD" transform="translate(-368.000000, -410.000000)" fill-rule="nonzero" fill="#FFFFFF">
-			            <g id="Group-2" transform="translate(367.000000, 410.000000)">
-			                <path d="M156.885705,202.38386 L156.885705,202.38386 L156.885705,202.38386 C160.167848,202.38386 162.82855,199.723157 162.82855,196.441014 C162.82855,195.715983 162.695878,194.997071 162.437088,194.319799 L90.7282974,6.65241698 L90.7282974,6.65241698 C89.3366118,3.01026944 85.8419442,0.604504043 81.9429665,0.604504043 L81.9429665,0.604504043 L81.9429665,0.604504043 C78.0439887,0.604504043 74.5493211,3.01026944 73.1576355,6.65241698 L1.36783171,194.531816 L1.36783171,194.531816 C0.227117715,197.517151 1.72247902,200.861976 4.70781466,202.00269 C5.36728075,202.254675 6.06729097,202.38386 6.77326007,202.38386 L6.77326007,202.38386 L6.77326007,202.38386 C11.8261088,202.38386 16.3456415,199.240482 18.1037854,194.503372 L81.9429665,22.4962756 L145.267211,194.283939 L145.267211,194.283939 C147.061262,199.150888 151.698624,202.38386 156.885705,202.38386 Z" id="Line"></path>
-			            </g>
-			        </g>
-			    </g>
-			</svg>
-			<div class="logo-element m-whiskers">
-				<svg class="m" width="184px" height="199px" viewBox="0 0 184 199" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-				    <!-- Generator: Sketch 45 (43475) - http://www.bohemiancoding.com/sketch -->
-				    <desc>Created with Sketch.</desc>
-				    <defs></defs>
-				    <g id="aa" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-				        <g id="Desktop-HD" transform="translate(-630.000000, -415.000000)" fill-rule="nonzero" fill="#FFFFFF">
-				            <g id="Group-2" transform="translate(367.000000, 410.000000)">
-				                <g id="Group" transform="translate(213.472215, 5.544750)">
-				                    <path d="M138.329923,57.5851716 C140.346138,58.6428583 142.753233,58.6428583 144.769448,57.5851716 L219.176185,18.5521296 L219.176185,191.452435 C219.176185,195.280286 222.279271,198.383372 226.107122,198.383372 C229.934973,198.383372 233.038059,195.280286 233.038059,191.452435 L233.038059,7.08949985 C233.038059,1.87801591 227.502374,-1.46916409 222.887359,0.951827461 L141.549686,43.6207711 L60.2120117,0.951827461 C55.5969966,-1.46916409 50.0613118,1.87801591 50.0613118,7.08949985 L50.0613118,191.452435 C50.0613118,195.280286 53.1643982,198.383372 56.9922492,198.383372 C60.8201002,198.383372 63.9231866,195.280286 63.9231866,191.452435 L63.9231866,18.5521296 L138.329923,57.5851716 Z" id="Line-2"></path>
-				                </g>
-				            </g>
-				        </g>
-				    </g>
-				</svg>
-				<svg class="whiskers left-whiskers" width="90px" height="56px" viewBox="0 0 90 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-				    <!-- Generator: Sketch 45 (43475) - http://www.bohemiancoding.com/sketch -->
-				    <desc>Created with Sketch.</desc>
-				    <defs></defs>
-				    <g id="aa" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-				        <g id="Desktop-HD" transform="translate(-580.000000, -509.000000)" fill-rule="nonzero" fill="#FFFFFF">
-				            <g id="Group-2" transform="translate(367.000000, 410.000000)">
-				                <path d="M223.193426,154.025373 L290.558945,154.025373 C294.43446,154.025373 297.576186,150.922287 297.576186,147.094435 C297.576186,143.266584 294.43446,140.163498 290.558945,140.163498 L223.193426,140.163498 C219.317911,140.163498 216.176185,143.266584 216.176185,147.094435 C216.176185,150.922287 219.317911,154.025373 223.193426,154.025373 Z" id="Line-4"></path>
-				                <g id="Group" transform="translate(213.472215, 5.544750)">
-				                    <path d="M5.82745059,108.165315 L80.6815746,122.027189 C84.4454316,122.7242 88.0616793,120.23803 88.7586899,116.474173 C89.4557004,112.710316 86.9695301,109.094068 83.2056731,108.397057 L8.35154912,94.5351826 C4.58769208,93.838172 0.971444384,96.3243423 0.274433821,100.088199 C-0.422576741,103.852056 2.06359355,107.468304 5.82745059,108.165315 Z" id="Line-3"></path>
-				                </g>
-				            </g>
-				        </g>
-				    </g>
-				</svg>
-				<svg class="whiskers right-whiskers" width="90px" height="56px" viewBox="0 0 90 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-				    <!-- Generator: Sketch 45 (43475) - http://www.bohemiancoding.com/sketch -->
-				    <desc>Created with Sketch.</desc>
-				    <defs></defs>
-				    <g id="aa" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-				        <g id="Desktop-HD" transform="translate(-774.000000, -509.000000)" fill-rule="nonzero" fill="#FFFFFF">
-				            <g id="Group-2" transform="translate(367.000000, 410.000000)">
-				                <path d="M419.945744,154.025373 L486.482743,154.025373 C490.310594,154.025373 493.413681,150.922287 493.413681,147.094435 C493.413681,143.266584 490.310594,140.163498 486.482743,140.163498 L419.945744,140.163498 C416.117893,140.163498 413.014807,143.266584 413.014807,147.094435 C413.014807,150.922287 416.117893,154.025373 419.945744,154.025373 Z" id="Line-4-Copy"></path>
-				                <g id="Group" transform="translate(213.472215, 5.544750)">
-				                    <path d="M199.893698,108.165315 L274.747822,122.027189 C278.511679,122.7242 282.127927,120.23803 282.824937,116.474173 C283.521948,112.710316 281.035778,109.094068 277.271921,108.397057 L202.417797,94.5351826 C198.653939,93.838172 195.037692,96.3243423 194.340681,100.088199 C193.643671,103.852056 196.129841,107.468304 199.893698,108.165315 Z" id="Line-3-Copy" transform="translate(238.582809, 108.281186) scale(1, -1) translate(-238.582809, -108.281186) "></path>
-				                </g>
-				            </g>
-				        </g>
-				    </g>
-				</svg>
-			</div>
-			<svg class="logo-element v" width="163px" height="203px" viewBox="0 0 163 203" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-			    <!-- Generator: Sketch 45 (43475) - http://www.bohemiancoding.com/sketch -->
-			    <desc>Created with Sketch.</desc>
-			    <defs></defs>
-			    <g id="aa" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-			        <g id="Desktop-HD" transform="translate(-911.000000, -410.000000)" fill-rule="nonzero" fill="#FFFFFF">
-			            <g id="Group-2" transform="translate(367.000000, 410.000000)">
-			                <path d="M700.271198,202.38386 L700.271198,202.38386 L700.271198,202.38386 C703.553341,202.38386 706.214043,199.723157 706.214043,196.441014 C706.214043,195.715983 706.081371,194.997071 705.822581,194.319799 L634.11379,6.65241698 L634.11379,6.65241698 C632.722105,3.01026944 629.227437,0.604504043 625.328459,0.604504043 L625.328459,0.604504043 L625.328459,0.604504043 C621.429481,0.604504043 617.934814,3.01026944 616.543128,6.65241698 L544.753324,194.531816 L544.753324,194.531816 C543.61261,197.517151 545.107972,200.861976 548.093307,202.00269 C548.752773,202.254675 549.452784,202.38386 550.158753,202.38386 L550.158753,202.38386 L550.158753,202.38386 C555.211601,202.38386 559.731134,199.240482 561.489278,194.503372 L625.328459,22.4962756 L688.652704,194.283939 L688.652704,194.283939 C690.446755,199.150888 695.084117,202.38386 700.271198,202.38386 Z" id="Line-Copy" transform="translate(625.292318, 101.494182) scale(1, -1) translate(-625.292318, -101.494182) "></path>
-			            </g>
-			        </g>
-			    </g>
-			</svg>
+			<!-- <a href="/"> -->
+				<div class="logo-container">
+					<svg class="logo-element a" width="162px" height="203px" viewBox="0 0 162 203" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+					    <!-- Generator: Sketch 45 (43475) - http://www.bohemiancoding.com/sketch -->
+					    <desc>Created with Sketch.</desc>
+					    <defs></defs>
+					    <g id="aa" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+					        <g id="Desktop-HD" transform="translate(-368.000000, -410.000000)" fill-rule="nonzero" fill="#FFFFFF">
+					            <g id="Group-2" transform="translate(367.000000, 410.000000)">
+					                <path d="M156.885705,202.38386 L156.885705,202.38386 L156.885705,202.38386 C160.167848,202.38386 162.82855,199.723157 162.82855,196.441014 C162.82855,195.715983 162.695878,194.997071 162.437088,194.319799 L90.7282974,6.65241698 L90.7282974,6.65241698 C89.3366118,3.01026944 85.8419442,0.604504043 81.9429665,0.604504043 L81.9429665,0.604504043 L81.9429665,0.604504043 C78.0439887,0.604504043 74.5493211,3.01026944 73.1576355,6.65241698 L1.36783171,194.531816 L1.36783171,194.531816 C0.227117715,197.517151 1.72247902,200.861976 4.70781466,202.00269 C5.36728075,202.254675 6.06729097,202.38386 6.77326007,202.38386 L6.77326007,202.38386 L6.77326007,202.38386 C11.8261088,202.38386 16.3456415,199.240482 18.1037854,194.503372 L81.9429665,22.4962756 L145.267211,194.283939 L145.267211,194.283939 C147.061262,199.150888 151.698624,202.38386 156.885705,202.38386 Z" id="Line"></path>
+					            </g>
+					        </g>
+					    </g>
+					</svg>
+					<div class="logo-element m-whiskers">
+						<svg class="m" width="184px" height="199px" viewBox="0 0 184 199" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						    <!-- Generator: Sketch 45 (43475) - http://www.bohemiancoding.com/sketch -->
+						    <desc>Created with Sketch.</desc>
+						    <defs></defs>
+						    <g id="aa" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+						        <g id="Desktop-HD" transform="translate(-630.000000, -415.000000)" fill-rule="nonzero" fill="#FFFFFF">
+						            <g id="Group-2" transform="translate(367.000000, 410.000000)">
+						                <g id="Group" transform="translate(213.472215, 5.544750)">
+						                    <path d="M138.329923,57.5851716 C140.346138,58.6428583 142.753233,58.6428583 144.769448,57.5851716 L219.176185,18.5521296 L219.176185,191.452435 C219.176185,195.280286 222.279271,198.383372 226.107122,198.383372 C229.934973,198.383372 233.038059,195.280286 233.038059,191.452435 L233.038059,7.08949985 C233.038059,1.87801591 227.502374,-1.46916409 222.887359,0.951827461 L141.549686,43.6207711 L60.2120117,0.951827461 C55.5969966,-1.46916409 50.0613118,1.87801591 50.0613118,7.08949985 L50.0613118,191.452435 C50.0613118,195.280286 53.1643982,198.383372 56.9922492,198.383372 C60.8201002,198.383372 63.9231866,195.280286 63.9231866,191.452435 L63.9231866,18.5521296 L138.329923,57.5851716 Z" id="Line-2"></path>
+						                </g>
+						            </g>
+						        </g>
+						    </g>
+						</svg>
+						<svg class="whiskers left-whiskers" width="90px" height="56px" viewBox="0 0 90 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						    <!-- Generator: Sketch 45 (43475) - http://www.bohemiancoding.com/sketch -->
+						    <desc>Created with Sketch.</desc>
+						    <defs></defs>
+						    <g id="aa" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+						        <g id="Desktop-HD" transform="translate(-580.000000, -509.000000)" fill-rule="nonzero" fill="#FFFFFF">
+						            <g id="Group-2" transform="translate(367.000000, 410.000000)">
+						                <path d="M223.193426,154.025373 L290.558945,154.025373 C294.43446,154.025373 297.576186,150.922287 297.576186,147.094435 C297.576186,143.266584 294.43446,140.163498 290.558945,140.163498 L223.193426,140.163498 C219.317911,140.163498 216.176185,143.266584 216.176185,147.094435 C216.176185,150.922287 219.317911,154.025373 223.193426,154.025373 Z" id="Line-4"></path>
+						                <g id="Group" transform="translate(213.472215, 5.544750)">
+						                    <path d="M5.82745059,108.165315 L80.6815746,122.027189 C84.4454316,122.7242 88.0616793,120.23803 88.7586899,116.474173 C89.4557004,112.710316 86.9695301,109.094068 83.2056731,108.397057 L8.35154912,94.5351826 C4.58769208,93.838172 0.971444384,96.3243423 0.274433821,100.088199 C-0.422576741,103.852056 2.06359355,107.468304 5.82745059,108.165315 Z" id="Line-3"></path>
+						                </g>
+						            </g>
+						        </g>
+						    </g>
+						</svg>
+						<svg class="whiskers right-whiskers" width="90px" height="56px" viewBox="0 0 90 56" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+						    <!-- Generator: Sketch 45 (43475) - http://www.bohemiancoding.com/sketch -->
+						    <desc>Created with Sketch.</desc>
+						    <defs></defs>
+						    <g id="aa" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+						        <g id="Desktop-HD" transform="translate(-774.000000, -509.000000)" fill-rule="nonzero" fill="#FFFFFF">
+						            <g id="Group-2" transform="translate(367.000000, 410.000000)">
+						                <path d="M419.945744,154.025373 L486.482743,154.025373 C490.310594,154.025373 493.413681,150.922287 493.413681,147.094435 C493.413681,143.266584 490.310594,140.163498 486.482743,140.163498 L419.945744,140.163498 C416.117893,140.163498 413.014807,143.266584 413.014807,147.094435 C413.014807,150.922287 416.117893,154.025373 419.945744,154.025373 Z" id="Line-4-Copy"></path>
+						                <g id="Group" transform="translate(213.472215, 5.544750)">
+						                    <path d="M199.893698,108.165315 L274.747822,122.027189 C278.511679,122.7242 282.127927,120.23803 282.824937,116.474173 C283.521948,112.710316 281.035778,109.094068 277.271921,108.397057 L202.417797,94.5351826 C198.653939,93.838172 195.037692,96.3243423 194.340681,100.088199 C193.643671,103.852056 196.129841,107.468304 199.893698,108.165315 Z" id="Line-3-Copy" transform="translate(238.582809, 108.281186) scale(1, -1) translate(-238.582809, -108.281186) "></path>
+						                </g>
+						            </g>
+						        </g>
+						    </g>
+						</svg>
+					</div>
+					<svg class="logo-element v" width="163px" height="203px" viewBox="0 0 163 203" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+					    <!-- Generator: Sketch 45 (43475) - http://www.bohemiancoding.com/sketch -->
+					    <desc>Created with Sketch.</desc>
+					    <defs></defs>
+					    <g id="aa" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+					        <g id="Desktop-HD" transform="translate(-911.000000, -410.000000)" fill-rule="nonzero" fill="#FFFFFF">
+					            <g id="Group-2" transform="translate(367.000000, 410.000000)">
+					                <path d="M700.271198,202.38386 L700.271198,202.38386 L700.271198,202.38386 C703.553341,202.38386 706.214043,199.723157 706.214043,196.441014 C706.214043,195.715983 706.081371,194.997071 705.822581,194.319799 L634.11379,6.65241698 L634.11379,6.65241698 C632.722105,3.01026944 629.227437,0.604504043 625.328459,0.604504043 L625.328459,0.604504043 L625.328459,0.604504043 C621.429481,0.604504043 617.934814,3.01026944 616.543128,6.65241698 L544.753324,194.531816 L544.753324,194.531816 C543.61261,197.517151 545.107972,200.861976 548.093307,202.00269 C548.752773,202.254675 549.452784,202.38386 550.158753,202.38386 L550.158753,202.38386 L550.158753,202.38386 C555.211601,202.38386 559.731134,199.240482 561.489278,194.503372 L625.328459,22.4962756 L688.652704,194.283939 L688.652704,194.283939 C690.446755,199.150888 695.084117,202.38386 700.271198,202.38386 Z" id="Line-Copy" transform="translate(625.292318, 101.494182) scale(1, -1) translate(-625.292318, -101.494182) "></path>
+					            </g>
+					        </g>
+					    </g>
+					</svg>
+				</div>
+			<!-- </a> -->
 		</div>
 	</div>
 
-	<div class="section about">
-		<h1 class="about-title
+	<div id="about" name="about" class="section about">
+		<div class="about-container">
+			<h1 class="about-title
+					in-viewport
+					in-viewport-trans
+					in-viewport--glitch">
+				<span class="before">amy and maple</span>
+				<span class="real-content">amy and maple</span>
+				<span class="after">amy and maple</span>
+			</h1>
+			<div class="col-md-8 col-xs-12 about-row row">
+				<div class="col-md-6 col-sm-6 col-xs-12 about-col about-amy">
+					<div class="about-img
+					in-viewport
+					in-viewport-delay-one
+					in-viewport--slide-down
+					in-viewport--fade-in">
+						<img src="img/amy2.jpg"/>
+					</div>
+					<div class="about-p
+					in-viewport
+					in-viewport-trans
+					in-viewport--fade-in">
+						<p><span class="name">AMY HWANG</span> is a web developer who enjoys the challenge of learning new skills and creating visually engaging websites. Amy studied at Epicodus and worked at web agencies such as Ichor Studios and Department.nyc. <br>Amy describes herself as creative, highly empathetic, and introverted. When she's not coding, she can be found sipping tea, doodling or playing with her cat, Maple.</p>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-12 about-col about-maple">
+					<div class="about-img
+					in-viewport
+					in-viewport-delay-one
+					in-viewport--slide-down
+					in-viewport--fade-in">
+						<img src="img/maple.png"/>
+					</div>
+					<div class="about-p
+					in-viewport
+					in-viewport-trans
+					in-viewport--fade-in">
+						<p><span class="name">MAPLE THE CAT</span> is Amy's purrtner in crime and the creative consultant of all the projects. She may not be tech-savvy but she knows what looks good.<br>The feline loves waking hoomins up early in the morning, chatting, cuddling and sitting on black clothes.</p>
+					</div>				
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="projects" name="projects" class="section projects">
+		<div class="projects-collage row">
+		<h1 class="projects-title
 				in-viewport
 				in-viewport-trans
 				in-viewport--glitch">
-			<span class="before">amy and maple</span>
-			<span class="real-content">amy and maple</span>
-			<span class="after">amy and maple</span>
+			<span class="before">projects</span>
+			<span class="real-content">projects</span>
+			<span class="after">projects</span>
 		</h1>
-		<div class="col-xs-8 about-row">
-			<div class="col-xs-6 about-col about-amy">
-				<div class="about-img
-				in-viewport
-				in-viewport-delay-one
-				in-viewport--slide-down
-				in-viewport--fade-in">
-					<img src="img/amy2.jpg"/>
+			<div class="projects-project col-sm-8 col-xs-12 villager in-viewport in-viewport-delay-one in-viewport--fade-in">
+				<a href="https://villagergoods.com" target="_blank">
+					<div class="border wide">
+						<div class="projects-project-text">
+							<div class="background" style="background-image: url(/img/villager.jpg);"></div>
+							<h1 class="projects-project-title">Villager</h1>
+							<p class="projects-project-detail">Villager is an e-commerce site that promotes a healthier life.</p>
+							<a href="http://department.nyc"><p class="site-credit">Agency: Department NYC</p>
+							</a>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="projects-project col-sm-4 col-xs-6 goodlife in-viewport in-viewport-trans in-viewport--fade-in">
+				<a href="http://enjoyyourgoodlife.com" target="_blank">
+					<div class="border tall">
+						<div class="projects-project-text">
+							<div class="background" style="background-image: url(/img/goodlife.jpg);"></div>
+							<h1 class="projects-project-title">Goodlife</h1>
+							<p class="projects-project-detail">Goodlife is a premium essentials brand that sells wardrobe staples inspired by the modern day journey and nostalgic irreverence.</p>
+							<a href="http://department.nyc"><p class="site-credit">Agency: Department NYC</p>
+							</a>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="projects-project col-sm-4 col-xs-6">
+				<div class="projects-project col-xs-12 ichor in-viewport in-viewport-delay-two in-viewport--fade-in">
+					<a href="http://ichorstudios.com" target="_blank">
+						<div class="border square">
+							<div class="projects-project-text">
+								<div class="background" style="background-image: url(/img/ichor2.jpg);"></div>
+
+								<h1 class="projects-project-title">Ichor Studios</h1>
+								<p class="projects-project-detail">
+								Ichor Studios is a web design and development agency that provides services mainly to local businesses and nonprofits.</p>
+								<a href="http://ichorstudios.com/"><p class="site-credit">Agency: Ichor Studios</p></a>
+							</div>
+						</div>
+					</a>
 				</div>
-				<div class="about-p
-				in-viewport
-				in-viewport-trans
-				in-viewport--fade-in">
-					<p><span class="name">AMY HWANG</span> is a web developer who enjoys the challenge of learning new skills and creating visually engaging websites. Amy studied at Epicodus and worked at web agencies such as Ichor Studios and Department.nyc. <br>Amy describes herself as creative, highly empathetic, and introverted. When she's not coding, she can be found sipping tea, doodling or playing with her cat, Maple.</p>
+				<div class="projects-project col-xs-12 dogpaw in-viewport in-viewport-delay-one in-viewport--fade-in">
+					<a href="http://dogpawoffleashparks.org" target="_blank">
+						<div class="border square">
+							<div class="projects-project-text">
+								<div class="background" style="background-image: url(img/dogpaw.jpg);"></div>
+								<h1 class="projects-project-title">DOGPAW</h1>
+								<p class="projects-project-detail">DOGPAW is a non-profit that provides and maintains off-leash dog parks in SW Washington.</p>
+								<a href="http://ichorstudios.com/"><p class="site-credit">Agency: Ichor Studios</p></a>
+							</div>
+						</div>
+					</a>
 				</div>
 			</div>
-			<div class="col-xs-6 about-col about-maple">
-				<div class="about-img
-				in-viewport
-				in-viewport-delay-one
-				in-viewport--slide-down
-				in-viewport--fade-in">
-					<img src="img/maple.png"/>
-				</div>
-				<div class="about-p
-				in-viewport
-				in-viewport-trans
-				in-viewport--fade-in">
-					<p><span class="name">MAPLE THE CAT</span> is Amy's purrtner in crime and the creative consultant of all the projects. She may not be tech-savvy but she knows what looks good.<br>The feline loves waking hoomins up early in the morning, chatting, cuddling and sitting on black clothes.</p>
-				</div>				
+			<div class="projects-project col-sm-4 col-xs-6 grove in-viewport in-viewport-trans in-viewport--fade-in">
+				<a href="https://amyhwang.myshopify.com" target="_blank">
+					<div class="border tall">
+						<div class="projects-project-text">
+							<div class="background" style="background-image: url(/img/grovemade.jpg);"></div>
+							<h1 class="projects-project-title">Grovemade</h1>
+							<p class="projects-project-detail">This personal project is a redesign & rebuild of the Grovemade Desk Collection, focusing on ergonomics and functions as opposed to general e-commerce.</p>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="projects-project col-sm-4 col-xs-6 vancouver in-viewport in-viewport-delay-one in-viewport--fade-in">
+				<a href="http://vancouverbolt.com" target="_blank">
+					<div class="border square">
+						<div class="projects-project-text">
+							<div class="background" style="background-image: url(/img/vancouver.png);"></div>
+							<h1 class="projects-project-title">Vancouver<br>Bolt and Supply Inc.</h1>
+							<p class="projects-project-detail">Vancouver Bolt & Supply, Inc. provides quality supplies, tools, inventory management resources, and unequaled service since 1979.</p>
+							<a href="http://ichorstudios.com/"><p class="site-credit">Agency: Ichor Studios</p></a>
+						</div>
+					</div>
+				</a>
 			</div>
 		</div>
 	</div>
+	<div id="contact" name="contact" class="section contact">
+		<div class="contact-container">	
+			<h1 class="contact-title
+					in-viewport
+					in-viewport-trans
+					in-viewport--glitch">
+				<span class="before">let's make something cool together</span>
+				<span class="real-content">let's make something cool together</span>
+				<span class="after">let's make something cool together</span>
+			</h1>
+			<div class="contact-group">
+				<div class="contact-item in-viewport in-viewport--email in-viewport in-viewport--slide-left in-viewport--fade-in"><a href="mailto:hello@amyandmaple.com">
+				
+				<span class="contact-link">
+					<span class="before">Email</span>
+					<span class="real-content">Email</span>
+					<span class="after">Email</span>
+				</span>
 
-	<div class="section projects">
-		<div class="projects-collage">
-			<div class="projects-project col-sm-8 villager in-viewport in-viewport-delay-one in-viewport--fade-in">
-				<div class="border wide">
-					<div class="projects-text">
-						<div class="background" style="background-image: url(/img/villager.jpg);"></div>
-						<h1 class="projects-title">Villager</h1>
-						<p class="projects-detail">Villager is an e-commerce site that promotes a healthier life.</p>
-						<a href="http://department.nyc"><p class="site-credit">Agency: Department NYC</p>
-						</a>
-					</div>
-				</div>
+				<span class="contact-detail">hello@amyandmaple.com</span></a></div>
+
+				<div class="contact-item in-viewport in-viewport--github in-viewport--slide-left in-viewport--fade-in"><a href="https://github.com/amy1hwang">
+				
+				<span class="contact-link">
+					<span class="before">Github</span>
+					<span class="real-content">Github</span>
+					<span class="after">Github</span>
+				</span>
+
+				<span class="contact-detail">https://github.com/amy1hwang</span></a></div>
+
+				<div class="contact-item in-viewport 	transition: 1s ease-in-out;
+				in-viewport--linkedin in-viewport--slide-left in-viewport--fade-in"><a href="https://www.linkedin.com/in/amy1hwang">
+
+				<span class="contact-link">
+					<span class="before">LinkedIn</span>
+					<span class="real-content">LinkedIn</span>
+					<span class="after">LinkedIn</span>
+				</span>
+
+				<span class="contact-detail">https://www.linkedin.com/in/amy1hwang</span></a></div>
+				
+				<div class="contact-item in-viewport in-viewport--instagram in-viewport--slide-left in-viewport--fade-in"><a href="">
+				<span class="contact-link">
+					<span class="before">Instagram</span>
+					<span class="real-content">Instagram</span>
+					<span class="after">Instagram</span>
+				</span>
+				<span class="contact-detail">@amyandmaple</span></a></div>
+
+				<div class="contact-item in-viewport in-viewport--resume in-viewport--slide-left in-viewport--fade-in"><a href="">
+
+				<span class="contact-link">
+					<span class="before">Resume</span>
+					<span class="real-content">Resume</span>
+					<span class="after">Resume</span>
+				</span>
+
+				<span class="contact-detail">Amy Hwang in one page</span></a></div>
 			</div>
-			<div class="projects-project col-sm-4 goodlife in-viewport in-viewport-trans in-viewport--fade-in">
-				<div class="border tall">
-					<div class="projects-text">
-						<div class="background" style="background-image: url(/img/goodlife.jpg);"></div>
-						<h1 class="projects-title">Goodlife</h1>
-						<p class="projects-detail">Goodlife is a premium essentials brand that sells wardrobe staples inspired by the modern day journey and nostalgic irreverence.</p>
-						<a href="http://department.nyc"><p class="site-credit">Agency: Department NYC</p>
-						</a>
-					</div>
-
-				</div>
-			</div>
-			<div class="projects-project col-sm-4">
-				<div class="projects-project col-sm-12 ichor in-viewport in-viewport-delay-two in-viewport--fade-in">
-					<div class="border square">
-						<div class="projects-text">
-							<div class="background" style="background-image: url(/img/ichor2.jpg);"></div>
-
-							<h1 class="projects-title">Ichor Studios</h1>
-							<p class="projects-detail">
-							Ichor Studios is a web design and development agency that provides services mainly to local businesses and nonprofits.</p>
-							<a href="http://ichorstudios.com/"><p class="site-credit">Agency: Ichor Studios</p></a>
-						</div>
-		
-					</div>
-				</div>
-				<div class="projects-project col-sm-12 dogpaw in-viewport in-viewport-delay-one in-viewport--fade-in">
-					<div class="border square">
-						<div class="projects-text">
-							<div class="background" style="background-image: url(img/dogpaw.jpg);"></div>
-							<h1 class="projects-title">DOGPAW</h1>
-							<p class="projects-detail">DOGPAW is a non-profit that provides and maintains off-leash dog parks in SW Washington.</p>
-							<a href="http://ichorstudios.com/"><p class="site-credit">Agency: Ichor Studios</p></a>
-						</div>
-
-					</div>
-				</div>
-			</div>
-			<div class="projects-project col-sm-4 grove in-viewport in-viewport-trans in-viewport--fade-in">
-				<div class="border tall">
-					<div class="projects-text">
-						<div class="background" style="background-image: url(/img/grovemade.jpg);"></div>
-						<h1 class="projects-title">Grovemade</h1>
-						<p class="projects-detail">This personal project is a redesign & rebuild of the Grovemade Desk Collection, focusing on ergonomics and functions as opposed to general e-commerce.</p>
-					</div>
-
-				</div>
-			</div>
-			<div class="projects-project col-sm-4 vancouver in-viewport in-viewport-delay-two in-viewport--fade-in">
-				<div class="border square">
-					<div class="projects-text">
-						<div class="background" style="background-image: url(/img/vancouver.png);"></div>
-						<h1 class="projects-title">Vancouver<br>Bolt and Supply Inc.</h1>
-						<p class="projects-detail">Vancouver Bolt & Supply, Inc. provides quality supplies, tools, inventory management resources, and unequaled service since 1979.</p>
-						<a href="http://ichorstudios.com/"><p class="site-credit">Agency: Ichor Studios</p></a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="section contact">
-		<h1 class="contact-title
-				in-viewport
-				in-viewport-trans
-				in-viewport--glitch">
-			<span class="before">Let's make something cool together</span>
-			<span class="real-content">Let's make something cool together</span>
-			<span class="after">Let's make something cool together</span>
-		</h1>
-		<div class="contact-group">
-			<div class="contact-item in-viewport in-viewport--email in-viewport in-viewport--slide-left in-viewport--fade-in"><a href="mailto:hello@amyandmaple.com">
-			
-			<span class="contact-link">
-				<span class="before">Email</span>
-				<span class="real-content">Email</span>
-				<span class="after">Email</span>
-			</span>
-
-			<span class="contact-detail">hello@amyandmaple.com</span></a></div>
-
-			<div class="contact-item in-viewport in-viewport--github in-viewport--slide-left in-viewport--fade-in"><a href="https://github.com/amy1hwang">
-			
-			<span class="contact-link">
-				<span class="before">Github</span>
-				<span class="real-content">Github</span>
-				<span class="after">Github</span>
-			</span>
-
-			<span class="contact-detail">https://github.com/amy1hwang</span></a></div>
-
-			<div class="contact-item in-viewport 	transition: 1s ease-in-out;
-			in-viewport--linkedin in-viewport--slide-left in-viewport--fade-in"><a href="https://www.linkedin.com/in/amy1hwang">
-
-			<span class="contact-link">
-				<span class="before">LinkedIn</span>
-				<span class="real-content">LinkedIn</span>
-				<span class="after">LinkedIn</span>
-			</span>
-
-			<span class="contact-detail">https://www.linkedin.com/in/amy1hwang</span></a></div>
-			
-			<div class="contact-item in-viewport in-viewport--instagram in-viewport--slide-left in-viewport--fade-in"><a href="">
-			<span class="contact-link">
-				<span class="before">Instagram</span>
-				<span class="real-content">Instagram</span>
-				<span class="after">Instagram</span>
-			</span>
-			<span class="contact-detail">@amyandmaple</span></a></div>
-
-			<div class="contact-item in-viewport in-viewport--resume in-viewport--slide-left in-viewport--fade-in"><a href="">
-
-			<span class="contact-link">
-				<span class="before">Resume</span>
-				<span class="real-content">Resume</span>
-				<span class="after">Resume</span>
-			</span>
-
-			<span class="contact-detail">Amy Hwang in one page</span></a></div>
 		</div>
 	</div>
 </body>

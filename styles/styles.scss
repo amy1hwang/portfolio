@@ -92,14 +92,44 @@ body {
   	font-family: $futura, sans-serif;
 }
 
-
 .menu {
-	top: 32px;
-	left: 32px;
-	padding: 0;
-	z-index: 9999;
+	top: -20px;
+	left: 20px;
+	z-index: 99999;
+	width: 100%;
+	@media screen and (max-width: 550px) {
+		top: 20px;
+		top: 0;
+		left: 0;
+	}
+	.menu-container {
+		position: absolute;
+		display: flex;
+		transform-origin: bottom left;
+		transform: rotate(90deg);
+		transition: background .2s ease-in-out 0;
+		@media screen and (max-width: 550px) {
+			transform: rotate(0deg);
+			width: 100%;
+			padding: 10px;
+			justify-content: space-between;
+		}
+	}
 	.menu-items {
-		margin-bottom: 32px;
+		margin-left: 20px;
+		@media screen and (min-width: 550px) {
+			transform: rotate(180deg);
+		}
+		@media screen and (max-width: 550px) {
+			transform: rotate(0deg)translateX(-1000px);
+			opacity: 0;
+			transition: .2s ease-in-out 0;
+		}
+	}
+
+	.mobile-nav-slide {
+		transform: translateX(0);
+		opacity: 1;
 	}
 	
 	.menu-item {
@@ -121,36 +151,119 @@ body {
 	}
 }
 
+.mobile-nav {
+	width: 25px;
+	flex-grow: 0;
+	flex-shrink: 0;
+	cursor: pointer;
+	display: none;
+	@media screen and (max-width: 550px) {
+		display: inline-block;
+	} 
+}
+
+.hamburger {
+	width: 100%;
+	height: 2.5px;
+	background-color: white;
+	margin: 6px 0;
+	transition: .4s ease-in-out 0;
+}
+
+.open .menu-container {
+	@media screen and (max-width: 550px) {
+		background-image: linear-gradient(-180deg, #FF7676 0%, rgba(255,118,118,0.95) 40%, rgba(255,118,118,0.00) 100%);
+	} 
+}
+
+.open .hamburger {
+	// background-color: #FF7676;
+	&:first-of-type {
+		transform: translate(-4px,6px)rotate(45deg);	
+	}
+	&:last-of-type {
+		transform: translate(-4px,-11px)rotate(-45deg);	
+	}
+	&:nth-of-type(2) {
+		opacity: 0;	
+	}
+}
+
 .section {
-	height: 100vh;
+	min-height: 100vh;
 }
 
 .landing {
 	z-index: 9999;
+	min-height: 100vh;
+	width: 100%;
 }
 
 .logo {
 	position: fixed;
-	left: 50%;
+	transform: scale(1)translate3d(50%, 50%, 0);
 	bottom: 50%;
-	transform: scale(1) translate(-50%, 50%);
-	transform-origin-x: 0%;
-	transform-origin-y: 100%;
-	z-index: 9999;
-	transition: .4s ease-in-out;
+	right: 50%;
+	transform-origin-x: right;
+	transform-origin-y: bottom;
+	z-index: 0;
+	transition: 1s ease;
 	.logo-element {
 		display: inline-block;
 	}
 }
 
-.js-logo-after-scroll {
-	transform: scale(.6) translate(0, 0);
-	left: 0px;
-	bottom: -24px;
+.logo-container {
+	white-space: nowrap;
+	transform-origin: center;
+	transition: .8s ease 0;
+	@media screen and (max-width: 800px) {
+		transform: scale(.8);
+	};
+	@media screen and (max-width: 660px) {
+		transform: scale(.6);
+	}	
+	@media screen and (max-width: 500px) {
+		transform: scale(.45);
+	}	
+}
+
+
+.js-logo-after-scroll{
+	transform: scale(.6)translate3d(0%,-310%,0)rotate(-90deg);
+	right: -20px;
+	bottom: 0;
 	&:hover {
-		bottom: -64px;
-		transition: bottom .2s ease-in-out;	
+		cursor: pointer;
 	}
+	@media screen and (max-width: 980px) {
+		opacity: .25;
+	};
+	@media screen and (max-width: 800px) {
+		right: -19.2px;
+	};
+	@media screen and (max-width: 770px) {
+		z-index: -1;
+	}
+	@media screen and (max-width: 660px) {
+		right: -14.4px;
+	}	
+	@media screen and (max-width: 500px) {
+		right: -10.8
+	}
+}
+
+.js-logo-after-scroll .logo-container {
+	transform-origin: left bottom;
+	@media screen and (max-width: 800px) {
+		transform: scale(.8);
+	};
+	@media screen and (max-width: 660px) {
+		transform: scale(.6);
+	}	
+	@media screen and (max-width: 500px) {
+		transform: scale(.45);
+	}	
 }
 
 .a {
@@ -213,8 +326,8 @@ body {
 
 
 .about {
-	padding: 80px 0;
-	margin-bottom: 120px;
+	padding: 40px 0;
+	margin-top: 120px;
 }
 
 .about-title {
@@ -222,7 +335,9 @@ body {
 	text-align: center;
 	@include glitch(0);
 	font-style: italic;
-	// text-transform: uppercase;
+	@media screen and (max-width: 375px) {
+		font-size: 48px;
+	}
 }
 
 .about-row {
@@ -238,10 +353,18 @@ body {
 
 .about-amy {
 	padding-right: 30px;
+	@media screen and (max-width: 770px) {
+		padding: 0;
+		padding-right: 0px;
+	}
 }
 
 .about-maple {
 	padding-left: 30px;
+	@media screen and (max-width: 770px) {
+		padding: 0;
+		padding-left: 0px;
+	}
 }
 
 .about-img {
@@ -270,12 +393,15 @@ body {
 }
 
 .about-p {
-	margin: auto;
+	margin: 48px auto;
 	text-align: center;
-	margin-top: 48px;
 	font-size: 20px;
 	color: white;
 	font-family: "futura-pt",sans-serif;
+	max-width: 480px;
+	@media screen and (max-width: 980px) {
+		margin: 24px auto 60px;
+	}
 }
 
 .name {
@@ -298,11 +424,48 @@ body {
 
 .projects {
 	padding: 40px 80px;
+	@media screen and (max-width: 820px) {
+		padding-right: 10px;
+	}
+	@media screen and (max-width: 770px) {
+		padding-left: 40px;
+	}
+	@media screen and (max-width: 550px) {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+}
+
+.projects-title {
+	font-size: 60px;
+	text-align: right;
+	@include glitch(0);
+	font-style: italic;
+	margin-bottom: 48px;
+	@media screen and (max-width: 1000px) {
+		text-align: center;
+	}
+	@media screen and (max-width: 375px) {
+		font-size: 48px;
+	}
+
 }
 
 .projects-collage {
 	float: right;
 	width: calc(100vh - 80px);
+	margin-right: 120px;
+	@media screen and (max-width: 1100px) {
+		margin-right: 80px;
+	}
+	@media screen and (max-width: 1000px) {
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	@media screen and (max-width: 820px) {
+		width: 100%;
+	}
 }
 
 .projects-project {
@@ -339,7 +502,8 @@ body {
     	box-shadow:inset 0px 0px 0px 3px #0ff;
 	    z-index: -1;
 	}
-	.projects-text {
+	.projects-project-text {
+		text-align: left;
 		position: absolute;
 		padding: 20px;
 		left: 0px;
@@ -362,10 +526,6 @@ body {
 		}
 	}
 
-	.projects-title {
-		font-weight: bold;
-	}
-
 	.background {
 		position: absolute;
 		z-index: -1;
@@ -382,11 +542,12 @@ body {
 		background-position: 60% 100%;
 	}
 
-	.projects-title {
+	.projects-project-title {
 		font-size: 20px;
+		font-weight: bold;
 	}
 
-	.projects-detail {
+	.projects-project-detail {
 		font-size: 18px;
 		margin-top: 50px;
 		width: 100%;
@@ -413,11 +574,11 @@ body {
     	&:after {
     		animation: frame-reverse-glitch .2s cubic-bezier(.25, .46, .45, .94) both .2s;
     	}
-    	.projects-text:after {
+    	.projects-project-text:after {
     		opacity: .2;
     		transition: opacity .4s ease-in-out;
     	}
-    	.projects-detail {
+    	.projects-project-detail {
 			opacity: 1;
 			transform: translateY(0);
 			transition: opacity .4s ease-in-out .5s;
@@ -434,13 +595,6 @@ body {
     }
 }
 
-// .vancouver {
-// 	.projects-text {
-// 		top: calc(100% - 80px);
-// 	}
-// }
-
-
 .goodlife {
 	float: right;
 }
@@ -455,19 +609,31 @@ body {
 
 .square {
 	padding-bottom: 100%;
-	.projects-detail {
+	.projects-project-detail {
 		font-size: 16px;
 		margin-top: 40px;
+		@media screen and (max-width: 760px) {
+			margin-top: 20px;
+		}
+	}
+}
+
+.grove .tall {
+	@media screen and (max-width: 770px) {
+		padding-bottom: 100%;
+		.projects-project-detail {
+			margin-top: 20px;
+		}
 	}
 }
 
 .vancouver .square {
 	&.border:hover {
-		.projects-text {
+		.projects-project-text {
 			padding-top: 10px;
 		}	
 	}
-	.projects-detail {
+	.projects-project-detail {
 		margin-top: 20px;
 	}
 	.site-credit {
@@ -476,8 +642,26 @@ body {
 }
 
 .contact {
+	padding-right: 80px;
 	position: relative;
-	padding: 200px 320px;
+	height: 100vh;
+}
+
+.contact-container {
+	float: right;
+	right: 200px;
+	top: 50%;
+	transform: translateY(-50%);
+	position: absolute;
+	@media screen and (max-width: 1100px) {
+		right: 160px;
+	}
+	@media screen and (max-width: 1000px) {
+		right: 14%;
+	}
+	@media screen and (max-width: 770px) {
+		right: 10px;
+	}
 }
 
 .contact-title {
@@ -487,10 +671,8 @@ body {
 }
 
 .contact-group {
-	padding: 200px 320px;
-	position: absolute;
-	right: 0;
-	bottom: 0;
+	// position: absolute;
+	margin-top: 120px;
 	text-align: right;
 	color: white;
 	a {
@@ -499,28 +681,34 @@ body {
 }
 
 .contact-link {
-	font-size: 32px;
+	font-size: 30px;
 	line-height: 42px;
 	@include text-hover;
 	@include glitch(-0.25em);
 	transition: padding 0 ease 0;
+	@media screen and (max-width: 420px) {
+		font-size: 26px;
+	}
 }
 
 .contact-detail {
+	font-family: "futura-pt",sans-serif;
 	font-size: 20px;
-	font-weight: 200;
 	max-width: 0;
 	overflow: hidden;
 	display: inline-block;
 	white-space: nowrap;
 	transition: all .4s ease-in-out 0;
+	@media screen and (max-width: 420px) {
+		font-size: 16px;
+	}
+	@media screen and (max-width: 420px) {
+		display: none;
+	}
 }
 
 .contact-item {
 	display: block;
-	&:hover, &:focus {
-
-	}
 }
 
 .contact-item:hover, .contact-item:focus {
@@ -703,23 +891,23 @@ body {
 
 
 .in-viewport-trans {
-	transition: all .4s ease-in-out .6s;
+	transition: all .4s ease-in-out .4s;
 }
 .in-viewport-delay-one {
-	transition: all .4s ease-in-out 1s;
+	transition: all .4s ease-in-out .7s;
 }
 .in-viewport-delay-two {
-	transition: all .4s ease-in-out 1.4s;
+	transition: all .4s ease-in-out 1.2s;
 }
-.in-viewport-delay-three {
-	transition: all .4s ease-in-out 1.8s;
-}
-.in-viewport-delay-four {
-	transition: all .4s ease-in-out 2s;
-}
-.in-viewport-delay-five {
-	transition: all .4s ease-in-out 2.4s;
-}
+// .in-viewport-delay-three {
+// 	transition: all .4s ease-in-out 1.6s;
+// }
+// .in-viewport-delay-four {
+// 	transition: all .4s ease-in-out 2s;
+// }
+// .in-viewport-delay-five {
+// 	transition: all .4s ease-in-out 2.4s;
+// }
 
 .in-viewport--email {
 	transition: all .4s ease-in-out .2s;

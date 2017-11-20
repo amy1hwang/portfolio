@@ -1,4 +1,8 @@
 $(function() {	
+
+	//fastclick 
+	FastClick.attach(document.body);
+
 	var started = false;
 	var intervalID = null;
 	startIntervalOnce = function() {
@@ -43,6 +47,9 @@ $(function() {
 	}, 50);
 
 	$(window).on('scroll', function() {
+		if( $(window).scrollTop() === 0) {
+			$('body').addClass('js-hide-overflow');
+		};
 		if( $(window).scrollTop() > 100) {
 			$(".logo").addClass("js-logo-after-scroll");
 			startIntervalOnce();
@@ -51,9 +58,30 @@ $(function() {
 			stopInterval();
 		}
 		inViewport();
+	});
+
+	$('.logo').click(function() {
+		$('html, body').animate({
+			scrollTop: 0
+		}, 400);
+		$('body').addClass('js-hide-overflow');
 	})
 
+	//when menu item is clicked, scoll down
+	$(".menu-items a").click(function() {
+		section = $(this).attr('href').replace("goto-", '');
+		console.log(section);
+		$('body').removeClass('js-hide-overflow');
+		$('html, body').animate({
+			scrollTop: $(section).offset().top
+		}, 500);
+	});
 
+
+	$('.mobile-nav').click(function() {
+		$('.menu').toggleClass('open');
+		$('.menu-items').toggleClass('mobile-nav-slide')
+	});
 
 });
 
