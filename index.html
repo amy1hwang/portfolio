@@ -2,8 +2,16 @@
 <html>
 <head>
 	<title>Amy Hwang - Web Developer</title>
-	<meta name=“description” content=““>
+	<meta name=“description” content="Amy Hwang | Web Developer | Front End Developer | Web Designer">
+	<meta name="keywords" content="Amy, Amy Hwang, Amy and Maple, Web Developer, HTML, HTML5, CSS, SCSS, SASS, WordPress, JQuery, JS, Shopify, Jekyll, PHP,  WooCommerce, Sketch">
+	<meta name="url" content="http://amyandmaple.com/">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/manifest.json">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#ff7676">
+	<meta name="theme-color" content="#ffffff">
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script type='application/javascript' src='/scripts/fastclick.js'></script>
@@ -26,16 +34,16 @@
 			</div>
 			<div class="menu-items">
 				<a href="#goto-about">
-					<span class="menu-item">
+					<span class="menu-item" nav-name="about">
 						<span class="before">about</span>
 						<span class="real-content">about</span>
-						<span class="after">about</span></span>
+						<span class="after">about</span>
 				</a>
 			</div>
 
 			<div class="menu-items">
 				<a href="#goto-projects">
-					<span class="menu-item">
+					<span class="menu-item" nav-name="projects">
 						<span class="before">projects</span>
 						<span class="real-content">projects</span>
 						<span class="after">projects</span>
@@ -45,7 +53,7 @@
 
 			<div class="menu-items">
 				<a href="#goto-contact">
-					<span class="menu-item">
+					<span class="menu-item" nav-name="contact">
 						<span class="before">contact</span>
 						<span class="real-content">contact</span>
 						<span class="after">contact</span>
@@ -54,7 +62,7 @@
 			</div>
 		</div>
 	</div>
-	<div id="landing" name"landing" class="section landing">
+	<div id="landing" name="landing" class="section landing">
 		<div class="logo">
 			<!-- <a href="/"> -->
 				<div class="logo-container">
@@ -133,7 +141,7 @@
 		</div>
 	</div>
 
-	<div id="about" name="about" class="section about">
+	<div id="about" name="about" class="section about in-viewport">
 		<div class="about-container">
 			<h1 class="about-title
 					in-viewport
@@ -156,7 +164,7 @@
 					in-viewport
 					in-viewport-trans
 					in-viewport--fade-in">
-						<p><span class="name">AMY HWANG</span> is a web developer who enjoys the challenge of learning new skills and creating visually engaging websites. Amy studied at Epicodus and worked at web agencies such as Ichor Studios and Department.nyc. <br>Amy describes herself as creative, highly empathetic, and introverted. When she's not coding, she can be found sipping tea, doodling or playing with her cat, Maple.</p>
+						<p><span class="name">AMY HWANG</span> is a web developer and a design enthusiast who enjoys the challenge of learning new skills and creating visually engaging websites. Amy is well-versed in HTML, CSS, SCSS, JavaScript, Wordpress and PHP. She studied coding and design at Epicodus and worked at web agencies such as Ichor Studios and Department.nyc. <br>Amy describes herself as creative, compassionate, and detail oriented. When she's not coding, she can be found sipping tea, doodling or playing with her pets Maple and Sam.</p>
 					</div>
 				</div>
 				<div class="col-md-6 col-sm-6 col-xs-12 about-col about-maple">
@@ -171,103 +179,141 @@
 					in-viewport
 					in-viewport-trans
 					in-viewport--fade-in">
-						<p><span class="name">MAPLE THE CAT</span> is Amy's purrtner in crime and the creative consultant of all the projects. She may not be tech-savvy but she knows what looks good.<br>The feline loves waking hoomins up early in the morning, chatting, cuddling and sitting on black clothes.</p>
+						<p><span class="name">MAPLE THE CAT</span> is Amy's creative consultant of all the projects. She may not be tech-savvy but she knows what looks good.<br>The feline loves waking hoomins up early in the morning, chatting, cuddling and sitting on black clothes.</p>
 					</div>				
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div id="projects" name="projects" class="section projects">
-		<div class="projects-collage row">
-		<h1 class="projects-title
-				in-viewport
-				in-viewport-trans
-				in-viewport--glitch">
-			<span class="before">projects</span>
-			<span class="real-content">projects</span>
-			<span class="after">projects</span>
-		</h1>
-			<div class="projects-project col-sm-8 col-xs-12 villager in-viewport in-viewport-delay-one in-viewport--fade-in">
-				<a href="https://villagergoods.com" target="_blank">
-					<div class="border wide">
-						<div class="projects-project-text">
-							<div class="background" style="background-image: url(/img/villager.jpg);"></div>
-							<h1 class="projects-project-title">Villager</h1>
-							<p class="projects-project-detail">Villager is an e-commerce site that promotes a healthier life.</p>
-							<a href="http://department.nyc"><p class="site-credit">Agency: Department NYC</p>
-							</a>
+	<div id="projects" name="projects" class="section projects in-viewport">
+		<div class="projects-row">
+			<div class="projects-collage">
+				<div class="projects-project col-sm-8 col-xs-12 stc in-viewport in-viewport-delay-one in-viewport--fade-in">
+					<a class="project-link" id="stc" href="https://www.simplythymecatering.com" target="_blank">
+						<div class="border wide">
+							<div project="stc" class="projects-project-text">
+								<div class="background" style="background-image: url(/img/simplythymecatering.jpg);"></div>
+								<h1 class="projects-project-title">Simply Thyme Catering</h1>
+								<p class="projects-project-detail">Simply Thyme Catering is an e-commerce site where people can request caterings for various events and holidays, and order items made by Simply Thyme Catering.
+								<br>The site was built with Wordpress, PHP, and Woocommerce.</p>
+								</p>
+								<div class="view-project" project-name="stc">
+									<span class="before">View Project >></span>
+									<span class="real-content">View Project >></span>
+									<span class="after">View Project >></span>
+								</div>
+								<a href="http://ichorstudios.com"><p class="site-credit">Agency: Ichor Studios</p>
+								</a>
+							</div>
 						</div>
-					</div>
-				</a>
-			</div>
-			<div class="projects-project col-sm-4 col-xs-6 goodlife in-viewport in-viewport-trans in-viewport--fade-in">
-				<a href="http://enjoyyourgoodlife.com" target="_blank">
-					<div class="border tall">
-						<div class="projects-project-text">
-							<div class="background" style="background-image: url(/img/goodlife.jpg);"></div>
-							<h1 class="projects-project-title">Goodlife</h1>
-							<p class="projects-project-detail">Goodlife is a premium essentials brand that sells wardrobe staples inspired by the modern day journey and nostalgic irreverence.</p>
-							<a href="http://department.nyc"><p class="site-credit">Agency: Department NYC</p>
-							</a>
+					</a>
+				</div>
+				<div class="projects-project col-sm-4 col-xs-6 goodlife in-viewport in-viewport-trans in-viewport--fade-in">
+					<a class="project-link" id="goodlife" href="http://enjoyyourgoodlife.com" target="_blank">
+						<div class="border tall">
+							<div project="goodlife" class="projects-project-text">
+								<div class="background" style="background-image: url(/img/goodlife.jpg);"></div>
+								<h1 class="projects-project-title">Goodlife</h1>
+								<p class="projects-project-detail">Goodlife is a premium essentials brand that sells wardrobe staples inspired by the modern day journey and nostalgic irreverence.
+								<br>The site was built with Shopify and Liquid.</p>
+								<div class="view-project" project-name="goodlife">
+									<span class="before">View Project >></span>
+									<span class="real-content">View Project >></span>
+									<span class="after">View Project >></span>
+								</div>
+								<a href="http://department.nyc"><p class="site-credit">Agency: Department NYC</p>
+								</a>
+							</div>
 						</div>
-					</div>
-				</a>
-			</div>
-			<div class="projects-project col-sm-4 col-xs-6">
-				<div class="projects-project col-xs-12 ichor in-viewport in-viewport-delay-two in-viewport--fade-in">
-					<a href="http://ichorstudios.com" target="_blank">
-						<div class="border square">
-							<div class="projects-project-text">
-								<div class="background" style="background-image: url(/img/ichor2.jpg);"></div>
+					</a>
+				</div>
+				<div class="projects-project col-sm-4 col-xs-6">
+					<div class="projects-project col-xs-12 ichor in-viewport in-viewport-delay-two in-viewport--fade-in">
+						<a class="project-link" id="ichor" href="http://ichorstudios.com" target="_blank">
+							<div class="border square">
+								<div project="ichor" class="projects-project-text">
+									<div class="background" style="background-image: url(/img/ichor2.jpg);"></div>
 
-								<h1 class="projects-project-title">Ichor Studios</h1>
-								<p class="projects-project-detail">
-								Ichor Studios is a web design and development agency that provides services mainly to local businesses and nonprofits.</p>
-								<a href="http://ichorstudios.com/"><p class="site-credit">Agency: Ichor Studios</p></a>
+									<h1 class="projects-project-title">Ichor Studios</h1>
+									<p class="projects-project-detail">
+									Ichor Studios is a web design and development agency that provides services mainly to local businesses and nonprofits.
+									<br>The site was built with Wordpress and PHP.</p>
+									<div class="view-project" project-name="ichor">
+										<span class="before">View Project >></span>
+										<span class="real-content">View Project >></span>
+										<span class="after">View Project >></span>
+									</div>
+									<a href="http://ichorstudios.com/"><p class="site-credit">Agency: Ichor Studios</p></a>
+								</div>
+							</div>
+						</a>
+					</div>
+					<div class="projects-project col-xs-12 dogpaw in-viewport in-viewport-delay-one in-viewport--fade-in">
+						<a class="project-link" id="dogpaw" href="http://dogpawoffleashparks.org" target="_blank">
+							<div class="border square">
+								<div project="dogpaw" class="projects-project-text">
+									<div class="background" style="background-image: url(img/dogpaw.jpg);"></div>
+									<h1 class="projects-project-title">DOGPAW</h1>
+									<p class="projects-project-detail">DOGPAW is a non-profit that provides and maintains off-leash dog parks in SW Washington.
+									<br>The site was built with Wordpress, PHP, and Restrict Content Pro.</p>
+									<div class="view-project" project-name="dogpaw">
+										<span class="before">View Project >></span>
+										<span class="real-content">View Project >></span>
+										<span class="after">View Project >></span>
+									</div>
+									<a href="http://ichorstudios.com/"><p class="site-credit">Agency: Ichor Studios</p></a>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="projects-project col-sm-4 col-xs-6 grove in-viewport in-viewport-trans in-viewport--fade-in">
+					<a class="project-link" id="grove" href="https://amyhwang.myshopify.com" target="_blank">
+						<div class="border tall">
+							<div project="grovemade" class="projects-project-text">
+								<div class="background" style="background-image: url(/img/grovemade.jpg);"></div>
+								<h1 class="projects-project-title">Grovemade</h1>
+								<p class="projects-project-detail">This personal project is a redesign & rebuild of the Grovemade Desk Collection, focusing on ergonomics and functions as opposed to general e-commerce.
+								<br>The site was built with Shopify and Liquid.</p>
+								<div class="view-project" project-name="grovemade">
+										<span class="before">View Project >></span>
+										<span class="real-content">View Project >></span>
+										<span class="after">View Project >></span>
+								</div>
 							</div>
 						</div>
 					</a>
 				</div>
-				<div class="projects-project col-xs-12 dogpaw in-viewport in-viewport-delay-one in-viewport--fade-in">
-					<a href="http://dogpawoffleashparks.org" target="_blank">
+				<div class="projects-project col-sm-4 col-xs-6 villager in-viewport in-viewport-delay-one in-viewport--fade-in">
+					<a class="project-link" id="villager" href="https://villagergoods.com" target="_blank">
 						<div class="border square">
-							<div class="projects-project-text">
-								<div class="background" style="background-image: url(img/dogpaw.jpg);"></div>
-								<h1 class="projects-project-title">DOGPAW</h1>
-								<p class="projects-project-detail">DOGPAW is a non-profit that provides and maintains off-leash dog parks in SW Washington.</p>
-								<a href="http://ichorstudios.com/"><p class="site-credit">Agency: Ichor Studios</p></a>
+							<div project="villager" class="projects-project-text">
+								<div class="background" style="background-image: url(/img/goodlife.jpg);"></div>
+								<h1 class="projects-project-title">Villager</h1>
+								<p class="projects-project-detail">Villager was born from the idea that a likeminded, health-conscious community of individuals could spark a movement to positively impact the lives of others.
+								<br>The site was built with Shopify and Liquid.</p>
+								<div class="view-project" project-name="villager">
+										<span class="before">View Project >></span>
+										<span class="real-content">View Project >></span>
+										<span class="after">View Project >></span>
+								</div>
+								<a href="http://department.nyc"><p class="site-credit">Agency: Department NYC</p></a>
 							</div>
 						</div>
 					</a>
 				</div>
-			</div>
-			<div class="projects-project col-sm-4 col-xs-6 grove in-viewport in-viewport-trans in-viewport--fade-in">
-				<a href="https://amyhwang.myshopify.com" target="_blank">
-					<div class="border tall">
-						<div class="projects-project-text">
-							<div class="background" style="background-image: url(/img/grovemade.jpg);"></div>
-							<h1 class="projects-project-title">Grovemade</h1>
-							<p class="projects-project-detail">This personal project is a redesign & rebuild of the Grovemade Desk Collection, focusing on ergonomics and functions as opposed to general e-commerce.</p>
-						</div>
-					</div>
-				</a>
-			</div>
-			<div class="projects-project col-sm-4 col-xs-6 vancouver in-viewport in-viewport-delay-one in-viewport--fade-in">
-				<a href="http://vancouverbolt.com" target="_blank">
-					<div class="border square">
-						<div class="projects-project-text">
-							<div class="background" style="background-image: url(/img/vancouver.png);"></div>
-							<h1 class="projects-project-title">Vancouver<br>Bolt and Supply Inc.</h1>
-							<p class="projects-project-detail">Vancouver Bolt & Supply, Inc. provides quality supplies, tools, inventory management resources, and unequaled service since 1979.</p>
-							<a href="http://ichorstudios.com/"><p class="site-credit">Agency: Ichor Studios</p></a>
-						</div>
-					</div>
-				</a>
 			</div>
 		</div>
 	</div>
-	<div id="contact" name="contact" class="section contact">
+	<div class="popup">
+		<div class="close-popup">
+			<div class="close-popup_line"></div>
+			<div class="close-popup_line"></div>
+		</div>
+	</div>
+
+	<div id="contact" name="contact" class="section contact in-viewport">
 		<div class="contact-container">	
 			<h1 class="contact-title
 					in-viewport

@@ -18,6 +18,7 @@ $(function() {
 				setTimeout(function() {
 					// do the glitch!
 					$(".in-viewport--glitch").toggleClass("js-in-viewport");
+					$(".in-viewport--vert-glitch").toggleClass("js-in-viewport")
 
 					randomGlitching();					
 				}, x)
@@ -38,13 +39,14 @@ $(function() {
 
 
 	inViewport = _.throttle(function() {
-		// we need to add a class when certain elements are in the viewport.
+		// need to add a class when certain elements are in the viewport.
 		var $tracked = $(".in-viewport");
 		$tracked.filter(':not(:in-viewport)')
 			.removeClass('js-in-viewport')
 		// $tracked.removeClass('js-in-viewport');
 		$tracked.filter(':in-viewport').addClass('js-in-viewport');
 	}, 50);
+
 
 	$(window).on('scroll', function() {
 		if( $(window).scrollTop() === 0) {
@@ -57,6 +59,16 @@ $(function() {
 			$(".logo").removeClass("js-logo-after-scroll");
 			stopInterval();
 		}
+		//when about section is in viewport, highlight 'about' nav item
+		//when js-in-view-port, take the name attr, find a nav-name attr that has the same name
+		$jsInViewport = $('.js-in-viewport');
+		if( $jsInViewport ) {
+			name = $jsInViewport.attr('name');
+			console.log('this name is ' + name);
+			$('.menu-item').removeClass('menu-active');
+			$('.menu-item[nav-name="' + name + '"]').addClass('menu-active');
+		}
+
 		inViewport();
 	});
 
@@ -73,7 +85,16 @@ $(function() {
 		console.log(section);
 		$('body').removeClass('js-hide-overflow');
 		$('html, body').animate({
-			scrollTop: $(section).offset().top
+			scrollTop: $(section).offset().top + 10
+		}, 500);
+	});
+
+	$(".menu-items:last-of-type a").click(function() {
+		lastSection = $(this).attr('href').replace("goto-", '');
+		console.log('last nav item is ' + lastSection);
+		$('body').removeClass('js-hide-overflow');
+		$('html, body').animate({
+			scrollTop: $(document).height()
 		}, 500);
 	});
 
@@ -83,5 +104,65 @@ $(function() {
 		$('.menu-items').toggleClass('mobile-nav-slide')
 	});
 
+	
+	$('.view-project').click(function() {
+		console.log('i clicked view project 1');
+		//get project-name attr, and find the same id name .projects-project-text
+		var projectName = $(this).attr('project-name');
+		var projectText = $('.projects-project-text[project="' + projectName + '"]');
+		//take the elements and add on the
+		$(projectText).clone().prependTo('.popup');
+		//open the popup
+		$('.popup').addClass('popup-open');
+	});
+
+	$('.project-link').each(function() {
+		//store hrefs
+		var link = $(this).attr('href');
+		var id = $(this).attr('id');
+		$(this).data('projectlinks', {link: link, id: id});
+		var storedLinks = $(this).data('projectlinks').link;
+		var storedIds = $(this).data('projectlinks').id;
+		console.log('stored links ' + storedLinks);
+		console.log('stored ids ' + storedIds);
+	
+		//check the screen size
+		$(window).on('resize', function() {
+			width = $( window ).width();	
+			console.log("screen width is " + width);
+				
+			if(width < 900 ) {
+				//if screen with is < 900px, no project href
+				$('.project-link').removeAttr('href');
+					console.log('i clicked view project 2');
+				$('.view-project').click(function() {
+					$('.popup-open .project-link').attr('href', storedLinks);
+				});
+			} else {
+				//if screen with is > 900px, restore href values
+				$('.project-link[id="' + storedIds + '"]').attr('href', storedLinks);
+			};
+		});
+	});
+
+	if( $( window ).width() < 900 ) {
+
+		var link = $('.project-link').attr('href');
+		$('.project-link').data('projectlinks', {link: link});
+		var storedLinks = $('.project-link').data('projectlinks').link;
+
+		$('.project-link').removeAttr('href');
+		$('.view-project').click(function() {
+			$('.popup-open .project-link').attr('href', storedLinks);
+		});
+	}; 
+
+	//close the popup
+	$('.close-popup').click(function() {
+		var popupProject = $('.popup .projects-project-text');
+		var projectName = $(popupProject).attr('project');
+		$('.popup').removeClass('popup-open');
+		$(popupProject).remove();
+	});
 });
 
