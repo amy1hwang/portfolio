@@ -14,7 +14,7 @@ ul {
 
 a {
   text-decoration: none; }
-  a:hover, a:visited {
+  a:hover, a:visited, a:focus {
     text-decoration: none;
     color: initial; }
 
