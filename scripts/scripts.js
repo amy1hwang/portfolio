@@ -126,6 +126,9 @@ $(function() {
 			console.log('this name is ' + name);
 			$('.menu-item').removeClass('menu-active');
 			$('.menu-item[nav-name="' + name + '"]').addClass('menu-active');
+			if (name === 'landing') {
+				console.log('landing section detacted')
+			}
 		}
 
 		inViewport();
