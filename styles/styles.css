@@ -202,7 +202,12 @@ body {
       right: -14.4px; } }
   @media screen and (max-width: 500px) {
     .js-logo-after-scroll {
-      right: -10.8; } }
+      right: -10.8px; } }
+
+.is-chrome .js-logo-after-scroll {
+  transform: scale(0.6) rotate(-90deg) translate(25%, 220%);
+  bottom: 0;
+  right: 0; }
 
 .js-logo-after-scroll .logo-container {
   transform-origin: left bottom; }
