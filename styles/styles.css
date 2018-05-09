@@ -14,9 +14,10 @@ ul {
 
 a {
   text-decoration: none; }
-  a:hover, a:visited, a:focus {
+  a:hover, a:visited, a:focus, a:active {
     text-decoration: none;
-    color: initial; }
+    color: initial;
+    outline: none; }
 
 .fixed {
   position: fixed; }

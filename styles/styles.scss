@@ -71,9 +71,10 @@ ul {
 
 a {
 	text-decoration: none;
-	&:hover, &:visited, &:focus {
+	&:hover, &:visited, &:focus, &:active {
 		text-decoration: none;
 		color: initial;
+		outline: none;
 	}
 }
 
