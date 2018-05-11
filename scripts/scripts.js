@@ -118,21 +118,18 @@ $(function() {
 			$(".logo").removeClass("js-logo-after-scroll");
 			stopInterval();
 		}
-		//when about section is in viewport, highlight 'about' nav item
+		//when section is in viewport, highlight nav item
 		//when js-in-view-port, take the name attr, find a nav-name attr that has the same name
 		$jsInViewport = $('.js-in-viewport');
 		if( $jsInViewport ) {
 			name = $jsInViewport.attr('name');
-			console.log('this name is ' + name);
 			$('.menu-item').removeClass('menu-active');
 			$('.menu-item[nav-name="' + name + '"]').addClass('menu-active');
-			if (name === 'landing') {
-				console.log('landing section detacted')
-			}
 		}
 
 	   if($(window).scrollTop() + $(window).height() == $(document).height()) {
-	       alert("bottom!");
+	   		$('.menu-item').removeClass('menu-active');
+	       $('.menu-item[nav-name="contact"]').addClass('menu-active');
 	   }
 
 
