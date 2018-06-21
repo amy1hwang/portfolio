@@ -139,8 +139,11 @@
 				</div>
 			<!-- </a> -->
 		</div>
+		<div class="scroll-down"><a href="#goto-about">
+			<div class="scroll-down_image"></div>
+			<p class="scroll-down_text">scroll down</p></a>
+		</div>
 	</div>
-
 	<div id="about" name="about" class="section about in-viewport">
 		<div class="about-container">
 			<h1 class="about-title
@@ -164,7 +167,7 @@
 					in-viewport
 					in-viewport-trans
 					in-viewport--fade-in">
-						<p><span class="name">AMY HWANG</span> is a web developer and a design enthusiast who enjoys the challenge of learning new skills and creating visually engaging websites. Amy is well-versed in HTML, CSS, SCSS, JavaScript, Wordpress and PHP. She studied coding and design at Epicodus and worked at web agencies such as Ichor Studios and Department.nyc. <br>Amy describes herself as creative, compassionate, and detail oriented. When she's not coding, she can be found sipping tea, doodling or playing with her pets Maple and Sam.</p>
+						<p><span class="name">AMY HWANG</span> is a web developer and a web designer who enjoys the challenge of learning new skills and creating visually engaging websites. Amy is well-versed in HTML, CSS, SCSS, JavaScript, Wordpress and PHP. She studied coding and design at Epicodus and worked at web agencies such as Ichor Studios and Department.nyc. <br>Amy describes herself as creative, compassionate, and detail oriented. When she's not coding, she can be found sipping tea, doodling or playing with her pets Maple and Sam.</p>
 					</div>
 				</div>
 				<div class="col-md-6 col-sm-6 col-xs-12 about-col about-maple">
@@ -192,7 +195,7 @@
 				<div class="projects-project col-sm-8 col-xs-12 stc in-viewport in-viewport-delay-one in-viewport--fade-in">
 					<a class="project-link" id="stc" href="https://www.simplythymecatering.com" target="_blank">
 						<div class="border wide">
-							<div project="stc" class="projects-project-text">
+							<!-- <div project="stc" class="projects-project-text">
 								<div class="background" style="background-image: url(/img/simplythymecatering.jpg);"></div>
 								<h1 class="projects-project-title">Simply Thyme Catering</h1>
 								<p class="projects-project-detail">Simply Thyme Catering is an e-commerce site where people can request caterings for various events and holidays, and order items made by Simply Thyme Catering.
@@ -205,6 +208,23 @@
 								</div>
 								<a href="http://ichorstudios.com"><p class="site-credit">Agency: Ichor Studios</p>
 								</a>
+							</div> -->
+							<div project="stc" class="projects-project-text">
+								<div class="background" style="background-image: url(/img/simplythymecatering.jpg);"></div>
+								<h1 class="projects-project-title">Simply Thyme Catering</h1>
+								<!-- <p class="projects-project-detail">Simply Thyme Catering is an e-commerce site where people can request caterings for various events and holidays, and order items made by Simply Thyme Catering.
+								<br>The site was built with Wordpress, PHP, and Woocommerce.</p> -->
+								</p>
+								<div class="view-project" project-name="stc">
+									<span class="before">View Project >></span>
+									<span class="real-content">View Project >></span>
+									<span class="after">View Project >></span>
+								</div>
+								<!--
+								<a href="http://ichorstudios.com">
+									<p class="site-credit">Agency: Ichor Studios</p>
+								</a>
+								-->
 							</div>
 						</div>
 					</a>
@@ -271,12 +291,12 @@
 				<div class="projects-project col-sm-4 col-xs-6 grove in-viewport in-viewport-trans in-viewport--fade-in">
 					<a class="project-link" id="grove" href="https://amyhwang.myshopify.com" target="_blank">
 						<div class="border tall">
-							<div project="grovemade" class="projects-project-text">
+							<div project="grove" class="projects-project-text">
 								<div class="background" style="background-image: url(/img/grovemade.jpg);"></div>
 								<h1 class="projects-project-title">Grovemade</h1>
 								<p class="projects-project-detail">This personal project is a redesign & rebuild of the Grovemade Desk Collection, focusing on ergonomics and functions as opposed to general e-commerce.
 								<br>The site was built with Shopify and Liquid.</p>
-								<div class="view-project" project-name="grovemade">
+								<div class="view-project" project-name="grove">
 										<span class="before">View Project >></span>
 										<span class="real-content">View Project >></span>
 										<span class="after">View Project >></span>
@@ -306,12 +326,12 @@
 			</div>
 		</div>
 	</div>
-	<div class="popup">
+	<!-- <div class="popup">
 		<div class="close-popup">
 			<div class="close-popup_line"></div>
 			<div class="close-popup_line"></div>
 		</div>
-	</div>
+	</div> -->
 
 	<div id="contact" name="contact" class="section contact in-viewport">
 		<div class="contact-container">	
@@ -324,7 +344,7 @@
 				<span class="after">let's make something cool together</span>
 			</h1>
 			<div class="contact-group">
-				<div class="contact-item in-viewport in-viewport--email in-viewport in-viewport--slide-left in-viewport--fade-in"><a href="mailto:hello@amyandmaple.com">
+				<div class="contact-item in-viewport in-viewport--email in-viewport in-viewport--slide-left in-viewport--fade-in"><a target="_blank" href="mailto:hello@amyandmaple.com">
 				
 				<span class="contact-link">
 					<span class="before">Email</span>
@@ -334,7 +354,7 @@
 
 				<span class="contact-detail">hello@amyandmaple.com</span></a></div>
 
-				<div class="contact-item in-viewport in-viewport--github in-viewport--slide-left in-viewport--fade-in"><a href="https://github.com/amy1hwang">
+				<div class="contact-item in-viewport in-viewport--github in-viewport--slide-left in-viewport--fade-in"><a target="_blank" href="https://github.com/amy1hwang">
 				
 				<span class="contact-link">
 					<span class="before">Github</span>
@@ -345,7 +365,7 @@
 				<span class="contact-detail">https://github.com/amy1hwang</span></a></div>
 
 				<div class="contact-item in-viewport 	transition: 1s ease-in-out;
-				in-viewport--linkedin in-viewport--slide-left in-viewport--fade-in"><a href="https://www.linkedin.com/in/amy1hwang">
+				in-viewport--linkedin in-viewport--slide-left in-viewport--fade-in"><a target="_blank" href="https://www.linkedin.com/in/amy1hwang">
 
 				<span class="contact-link">
 					<span class="before">LinkedIn</span>
@@ -355,15 +375,15 @@
 
 				<span class="contact-detail">https://www.linkedin.com/in/amy1hwang</span></a></div>
 				
-				<div class="contact-item in-viewport in-viewport--instagram in-viewport--slide-left in-viewport--fade-in"><a href="">
+<!-- 				<div class="contact-item in-viewport in-viewport--instagram in-viewport--slide-left in-viewport--fade-in"><a href="">
 				<span class="contact-link">
 					<span class="before">Instagram</span>
 					<span class="real-content">Instagram</span>
 					<span class="after">Instagram</span>
 				</span>
 				<span class="contact-detail">@amyandmaple</span></a></div>
-
-				<div class="contact-item in-viewport in-viewport--resume in-viewport--slide-left in-viewport--fade-in"><a href="/resume.pdf">
+ -->
+				<div class="contact-item in-viewport in-viewport--resume in-viewport--slide-left in-viewport--fade-in"><a target="_blank" href="/resume.pdf">
 
 				<span class="contact-link">
 					<span class="before">Resume</span>

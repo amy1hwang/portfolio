@@ -1,59 +1,59 @@
 //detact which brower a user is on
 
-(function() {
-  var root;
+// (function() {
+//   var root;
 
-  root = typeof exports !== "undefined" && exports !== null ? exports : this;
+//   root = typeof exports !== "undefined" && exports !== null ? exports : this;
 
-  window.is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
+//   window.is_chrome = navigator.userAgent.indexOf('Chrome') > -1;
 
-  window.is_explorer = navigator.userAgent.indexOf('MSIE') > -1;
+//   window.is_explorer = navigator.userAgent.indexOf('MSIE') > -1;
 
-  window.is_firefox = navigator.userAgent.indexOf('Firefox') > -1;
+//   window.is_firefox = navigator.userAgent.indexOf('Firefox') > -1;
 
-  window.is_safari = navigator.userAgent.indexOf("Safari") > -1;
+//   window.is_safari = navigator.userAgent.indexOf("Safari") > -1;
 
-  window.is_opera = navigator.userAgent.indexOf("Presto") > -1;
+//   window.is_opera = navigator.userAgent.indexOf("Presto") > -1;
 
-  window.is_mac = navigator.userAgent.indexOf('Mac OS') !== -1;
+//   window.is_mac = navigator.userAgent.indexOf('Mac OS') !== -1;
 
-  window.is_windows = !is_mac;
+//   window.is_windows = !is_mac;
 
-  window.is_mobile = /Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/i.test(navigator.userAgent);
+//   window.is_mobile = /Mobile|iP(hone|od|ad)|Android|BlackBerry|IEMobile|Kindle|NetFront|Silk-Accelerated|(hpw|web)OS|Fennec|Minimo|Opera M(obi|ini)|Blazer|Dolfin|Dolphin|Skyfire|Zune/i.test(navigator.userAgent);
 
-  if (window.is_chrome && window.is_safari) {
-    window.is_safari = false;
-  }
+//   if (window.is_chrome && window.is_safari) {
+//     window.is_safari = false;
+//   }
 
-  if (window.is_safari) {
-    document.documentElement.className += " is-safari";
-  } else {
-    document.documentElement.className += " is-not-safari";
-  }
+//   if (window.is_safari) {
+//     document.documentElement.className += " is-safari";
+//   } else {
+//     document.documentElement.className += " is-not-safari";
+//   }
 
-  if (window.is_chrome) {
-    document.documentElement.className += " is-chrome";
-  }
+//   if (window.is_chrome) {
+//     document.documentElement.className += " is-chrome";
+//   }
 
-  if (window.is_mac) {
-    document.documentElement.className += " is-mac";
-  }
+//   if (window.is_mac) {
+//     document.documentElement.className += " is-mac";
+//   }
 
-  if (window.is_windows) {
-    document.documentElement.className += " is-windows";
-  }
+//   if (window.is_windows) {
+//     document.documentElement.className += " is-windows";
+//   }
 
-  if (window.is_explorer) {
-    document.documentElement.className += " is-explorer";
-  }
+//   if (window.is_explorer) {
+//     document.documentElement.className += " is-explorer";
+//   }
 
-  if (window.is_mobile) {
-    document.documentElement.className += " is-mobile";
-  } else {
-    document.documentElement.className += " is-not-mobile";
-  }
+//   if (window.is_mobile) {
+//     document.documentElement.className += " is-mobile";
+//   } else {
+//     document.documentElement.className += " is-not-mobile";
+//   }
 
-}).call(this);
+// }).call(this);
 
 
 
@@ -106,10 +106,16 @@ $(function() {
 		$tracked.filter(':in-viewport').addClass('js-in-viewport');
 	}, 50);
 
+	setTimeout(function() {
+		$('.scroll-down').fadeIn(1000, "linear");	
+	}, 2500);
 
 	$(window).on('scroll', function() {
 		if( $(window).scrollTop() === 0) {
 			$('body').addClass('js-hide-overflow');
+		};
+		if( $(window).scrollTop() > 60) {
+			$('.scroll-down').fadeOut(1000, "linear");
 		};
 		if( $(window).scrollTop() > 100) {
 			$(".logo").addClass("js-logo-after-scroll");
@@ -131,8 +137,6 @@ $(function() {
 	   		$('.menu-item').removeClass('menu-active');
 	       $('.menu-item[nav-name="contact"]').addClass('menu-active');
 	   }
-
-
 		inViewport();
 	});
 
@@ -144,7 +148,7 @@ $(function() {
 	})
 
 	//when menu item is clicked, scoll down
-	$(".menu-items a").click(function() {
+	$(".menu-items a, .scroll-down a").click(function() {
 		section = $(this).attr('href').replace("goto-", '');
 		console.log(section);
 		$('body').removeClass('js-hide-overflow');
@@ -173,12 +177,28 @@ $(function() {
 		console.log('i clicked view project 1');
 		//get project-name attr, and find the same id name .projects-project-text
 		var projectName = $(this).attr('project-name');
+		var projectsProject = $('.' + projectName + ' ' + '.border');
 		var projectText = $('.projects-project-text[project="' + projectName + '"]');
 		//take the elements and add on the
 		$(projectText).clone().prependTo('.popup');
-		//open the popup
-		$('.popup').addClass('popup-open');
+		// //open the popup
+		// $('.popup').addClass('popup-open');
+		// $('.projects-collage, .about, .contact').fadeOut(200, "linear");
+		// //lock scroll
+		$('body').addClass('scroll-lock');
+		//expand to fullscreen
+		projectsProject.addClass('project-fullscreen');
+		
+		//escape case study when clicked outside the popup
+		$(document).click(function() {
+		    projectsProject.removeClass('project-fullscreen');
+		    $('body').removeClass('scroll-lock');
+		});
+		$('.project-fullscreen').click(function(event) {
+			event.stopPropagation();
+		});
 	});
+
 
 	$('.project-link').each(function() {
 		//store hrefs
@@ -209,7 +229,7 @@ $(function() {
 		});
 	});
 
-	if( $( window ).width() < 900 ) {
+	// if( $( window ).width() < 900 ) {
 
 		var link = $('.project-link').attr('href');
 		$('.project-link').data('projectlinks', {link: link});
@@ -219,14 +239,18 @@ $(function() {
 		$('.view-project').click(function() {
 			$('.popup-open .project-link').attr('href', storedLinks);
 		});
-	}; 
+	// }; 
 
 	//close the popup
-	$('.close-popup').click(function() {
-		var popupProject = $('.popup .projects-project-text');
-		var projectName = $(popupProject).attr('project');
-		$('.popup').removeClass('popup-open');
-		$(popupProject).remove();
-	});
+	// $('.close-popup').click(function() {
+	// 	var popupProject = $('.popup .projects-project-text');
+	// 	var projectName = $(popupProject).attr('project');
+	// 	$('body').removeClass('scroll-lock');
+	// 	$('.popup').removeClass('popup-open');
+	// 	setTimeout(function() {		
+	// 		$('.projects-collage, .about, .contact').fadeIn(200, "linear");
+	// 	}, 250);
+	// 	$(popupProject).remove();
+	// });
 });
 
