@@ -174,28 +174,60 @@ $(function() {
 
 	
 	$('.view-project').click(function() {
-		console.log('i clicked view project 1');
 		//get project-name attr, and find the same id name .projects-project-text
 		var projectName = $(this).attr('project-name');
-		var projectsProject = $('.' + projectName + ' ' + '.border');
+		var projectsProject = $('.' + projectName);
+		var projectBorder = $('.' + projectName + ' ' + '.border');
 		var projectText = $('.projects-project-text[project="' + projectName + '"]');
-		//take the elements and add on the
-		$(projectText).clone().prependTo('.popup');
-		// //open the popup
-		// $('.popup').addClass('popup-open');
-		// $('.projects-collage, .about, .contact').fadeOut(200, "linear");
+
+		//get the offset left and top
+		var offsetLeft = projectText.offset().left;
+		var offsetTop = projectText.offset().top - $(window).scrollTop();
+
+		//change css values of project boxes
+		projectText.css({
+		    'position': 'fixed', 
+		    'top': offsetTop + 'px',
+		    'left': offsetLeft + 'px',
+		    'width': projectText.width() + 40,
+		    'height': projectText.height() + 40,
+		});
+
+		$('.border').addClass('remove-borders');
+		projectText.addClass('project-fullscreen');
+		$('.projects-project-text, .about, .contact').hide();
+		projectText.show();
 		// //lock scroll
 		$('body').addClass('scroll-lock');
 		//expand to fullscreen
-		projectsProject.addClass('project-fullscreen');
+
 		
 		//escape case study when clicked outside the popup
 		$(document).click(function() {
-		    projectsProject.removeClass('project-fullscreen');
+			projectText.css({
+			    'position': '', 
+			    'top': '',
+			    'left': '',
+			    'width': '',
+			    'height': '',
+			});
+			$('.border').removeClass('remove-borders');
+		    projectText.removeClass('project-fullscreen');
 		    $('body').removeClass('scroll-lock');
+			$('.projects-project-text, .about, .contact').show();
 		});
 		$('.project-fullscreen').click(function(event) {
 			event.stopPropagation();
+		});
+
+			//close the popup
+		$('.close-popup').click(function() {
+			// var popupProject = $('.popup .projects-project-text');
+			// var projectName = $(popupProject).attr('project');
+			projectText.removeClass('project-fullscreen');
+			$('body').removeClass('scroll-lock');
+			$('.projects-project, .about, .contact').show();
+			// $(popupProject).remove();
 		});
 	});
 
@@ -241,16 +273,5 @@ $(function() {
 		});
 	// }; 
 
-	//close the popup
-	// $('.close-popup').click(function() {
-	// 	var popupProject = $('.popup .projects-project-text');
-	// 	var projectName = $(popupProject).attr('project');
-	// 	$('body').removeClass('scroll-lock');
-	// 	$('.popup').removeClass('popup-open');
-	// 	setTimeout(function() {		
-	// 		$('.projects-collage, .about, .contact').fadeIn(200, "linear");
-	// 	}, 250);
-	// 	$(popupProject).remove();
-	// });
 });
 
