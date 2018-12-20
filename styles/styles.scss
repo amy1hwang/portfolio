@@ -92,7 +92,7 @@ body {
 	background: linear-gradient(156deg, #FF7676 15%, #F5A623 35%, #F6A02D 40%, #FE7D6A 60%, #F5A623 80%, #FE7D6A 100%);  
 	min-height: 100vh;
 	font-family: $marydale, sans-serif;
-	// background: black;
+	overflow-x: hidden;
 }
 
 .scroll-lock {
@@ -722,9 +722,11 @@ body {
 .projects-project-detail {
 	font-family: $futura;
 	font-size: 18px;
-	margin-top: 50px;
+	margin-top: 36px;
 	width: 100%;
-	// display: none;
+	@media screen and (max-width: 500px) {
+		margin-top: 24px;
+	}
 }
 
 .responsive-design {
@@ -801,11 +803,21 @@ body {
 		&:before {
 			width: 100%;
 		}
+		@media screen and (max-width: 767px) {
+			font-size: 36px;
+		}
+		@media screen and (max-width: 500px) {
+			font-size: 28px;
+		}
+		@media screen and (max-width: 376px) {
+			font-size: 26px;
+		}
 	}
 
 	&.popup-open {
 		left: 120px;
 		opacity: 1;
+		z-index: 999;
 	}
 	@media screen and (max-width: 1200px) {
 		.responsive-design {
@@ -835,7 +847,11 @@ body {
 	position: fixed;
 	top: 25px;
 	right: 25px;
+	z-index: 9999;
 	width: 25px;
+	touch-action: manipulation;
+	box-sizing: content-box;
+	padding: 30px;
 	&:hover {
 		cursor: pointer;
 	}
