@@ -214,15 +214,9 @@ $(function() {
 		});
 	});
 
-
-	// var link = $('.project-link').attr('href');
-	// $('.project-link').data('projectlinks', {link: link});
-	// var storedLinks = $('.project-link').data('projectlinks').link;
-
-	// $('.project-link').removeAttr('href');
-	// $('.view-project').click(function() {
-	// 	$('.popup-open .project-link').attr('href', storedLinks);
-	// });
+    $(document).on('touchend', '.button', function(e) {
+        e.currentTarget.blur();
+    });
 
 });
 
