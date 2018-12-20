@@ -798,6 +798,7 @@ body {
 	border-left: solid 3px white;
 	box-shadow: -1px 1px 1px 0px rgba(0, 0, 0, 0.3);
 	transition: 1s ease;
+	overflow-x: hidden;
 	.projects-project-title {
 		font-size: 48px;
 		&:before {

@@ -713,7 +713,8 @@ body {
   opacity: 0;
   border-left: solid 3px white;
   box-shadow: -1px 1px 1px 0px rgba(0, 0, 0, 0.3);
-  transition: 1s ease; }
+  transition: 1s ease;
+  overflow-x: hidden; }
   .project-popups .project-info .projects-project-title {
     font-size: 48px; }
     .project-popups .project-info .projects-project-title:before {
