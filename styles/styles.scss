@@ -1,5 +1,5 @@
-// $futura: "futura-pt";
-$futura: "marydale";
+$futura: "futura-pt";
+$marydale: "marydale";
 
 @mixin text-hover {
 	position: relative;
@@ -91,7 +91,8 @@ a {
 body {
 	background: linear-gradient(156deg, #FF7676 15%, #F5A623 35%, #F6A02D 40%, #FE7D6A 60%, #F5A623 80%, #FE7D6A 100%);  
 	min-height: 100vh;
-	font-family: $futura, sans-serif;
+	font-family: $marydale, sans-serif;
+	// background: black;
 }
 
 .scroll-lock {
@@ -260,6 +261,7 @@ body {
 	}
 	@media screen and (max-width: 660px) {
 		right: -14.4px;
+		opacity: 0;
 	}	
 	@media screen and (max-width: 500px) {
 		right: -10.8px;
@@ -269,7 +271,7 @@ body {
 .is-chrome .js-logo-after-scroll {
 	transform: scale(0.6) rotate(-90deg) translate(25%, 220%);
 	bottom: 0;
-	right: 0;
+	right: 0px;
 }
 
 .js-logo-after-scroll .logo-container {
@@ -378,6 +380,9 @@ body {
 .about {
 	padding: 40px 0;
 	margin-top: 120px;
+	@media screen and (max-width: 980) {
+		padding: 40px 60px;
+	}
 }
 
 .about-title {
@@ -447,7 +452,7 @@ body {
 	text-align: center;
 	font-size: 20px;
 	color: white;
-	font-family: "futura-pt",sans-serif;
+	font-family: $futura;
 	max-width: 480px;
 	@media screen and (max-width: 980px) {
 		margin: 24px auto 60px;
@@ -456,7 +461,7 @@ body {
 
 .name {
 	position: relative;
-	font-family: $futura;
+	font-family: $marydale;
 	font-size: 22px;
 	font-weight: bold;
 	padding: 0 .35em;
@@ -474,11 +479,9 @@ body {
 
 .projects {
 	padding: 40px 80px;
+	position: relative;
 	@media screen and (max-width: 980px) {
 		padding: 40px 0;
-		padding-left: 80px;
-	}
-	@media screen and (max-width: 770px) {
 		padding-left: 40px;
 	}
 	@media screen and (max-width: 550px) {
@@ -643,7 +646,7 @@ body {
 	left: 0px;
 	top: 0;
 	width: 100%;
-	// transition: all .4s ease-in-out;
+	transition: 0;
 	height: 100%;
 	overflow: hidden;
 	bottom: 0;
@@ -663,26 +666,19 @@ body {
 	@media screen and (max-width: 500px) {
 		padding: 10px;
 	}
+	&:hover {
+		cursor: pointer;
+	}
 }
 
-.project-fullscreen {
-	left: 80px !important;
-	top: 0 !important;
-	z-index: 10;
-	width: calc(100% - 80px) !important;
-	height: 100vh !important;
-	// padding-bottom: 100vh;
-	box-shadow: -2px 1px 3px 0px rgba(0, 0, 0, 0.3);
-	overflow: scroll;
-	background-image: linear-gradient(-180deg, rgba(43,255,172,.2) 0%, rgba(255,50,236,.2) 54%, rgba(121,244,207,.2) 100%);
-	.projects-project-detail, .site-credit, .close-popup {
-		display: block;
-	}
-	.view-project {
+.projectsText-transition {
+	transition: all 5s ease;
+}
+@media screen and (max-width: 500px) {
+	.projects-project-text .projects-project-keywords {
 		display: none;
 	}
 }
-
 
 .background {
 	position: absolute;
@@ -697,21 +693,58 @@ body {
 	display: none;
 }
 
-.grove .background {
+
+.upcart .background {
 	background-position: 60% 100%;
 }
 
 .projects-project-title {
-	font-size: 20px;
+	font-size: 24px;
 	font-weight: bold;
+	position: relative;
+	display: inline-block;
+	&:before {
+		content: '';
+		position: absolute;
+		bottom: -10%;
+		left: 0;
+		width: 0;
+		height: 60%;
+		opacity: 0.15;
+		background-color: #9A40E5;
+		transition: .4s ease;
+	}
+	&:hover:before {
+		width: 100%;
+	}
 }
 
 .projects-project-detail {
+	font-family: $futura;
 	font-size: 18px;
 	margin-top: 50px;
 	width: 100%;
-	display: none;
+	// display: none;
 }
+
+.responsive-design {
+	max-width: 960px;
+	width: 70%;
+	margin: 40px auto;
+}
+
+.projects-project-keywords {
+	font-family: $futura;
+	margin-top: 12px;
+	font-size: 16px;
+}
+
+@media screen and (max-width: 800px) {
+	.projects-project-detail .projects-project-keywords {
+		font-size: 14px;
+	}
+}
+
 
 .view-project {
 	text-align: right;
@@ -744,101 +777,62 @@ body {
 
 .site-credit {
 	display: none;
-	text-align: right;
-	position: absolute;
-	bottom: 20px;
-	right: 20px;
 	font-size: 14px;
-	transform: translateY(10px);
-}
-
-.close-popup {
-	display: none;
+	margin-left: 48px;
 }
 
 
-// .popup {
-// 	position: fixed;
-// 	width: 75%;
-// 	height: 100%;
-// 	z-index: 10;
-// 	top: 0;
-// 	bottom: 0;
-// 	right: -80%;
-// 	border-left: 3px solid #fff;
-// 	box-shadow: -3px 0 3px rgba(0,0,0,.2);
-// 	transition: .6s ease;
-// 	&:before, &:after {
-// 		position: absolute;
-// 		content: '';
-// 		height: 100%;
-// 		width: 100%;
-// 		opacity: .8;
-// 	}
-// 	// &:before {
-// 	// 	-webkit-box-shadow:inset 0px 0px 0px 3px #f0f;
-// 	// 	-moz-box-shadow:inset 0px 0px 0px 3px #f0f;
-// 	// 	box-shadow:inset 0px 0px 0px 3px #f0f;
-// 	// 	z-index: -2;
-// 	// 	top: 4px;
-// 	// 	bottom: 0;
-// 	// 	left: -10px;
-// 	// 	right: 0;
+.project-popups .project-info {
+	position: fixed;
+	height: 100vh;
+	top: 0;
+	left: 100vw;
+	width: calc(100vw - 120px);
+	overflow: scroll;
+	z-index: 99;
+	padding: 60px;
+	padding-right: 180px;
+	opacity: 0;
+	border-left: solid 3px white;
+	box-shadow: -1px 1px 1px 0px rgba(0, 0, 0, 0.3);
+	transition: 1s ease;
+	.projects-project-title {
+		font-size: 48px;
+		&:before {
+			width: 100%;
+		}
+	}
 
-// 	// }
-// 	// &:after {
-// 	// 	-webkit-box-shadow:inset 0px 0px 0px 3px #0ff;
-// 	// 	-moz-box-shadow:inset 0px 0px 0px 3px #0ff;
-// 	// 	box-shadow:inset 0px 0px 0px 3px #0ff;
-// 	// 	z-index: -1;
-// 	// 	top: -6px;
-// 	// 	bottom: 0;
-// 	// 	left: 4px;
-// 	// 	right: 0;
-// 	// 	background-image: linear-gradient(-180deg, rgba(43,255,172,.4) 0%, rgba(255,50,236,.4) 54%, rgba(121,244,207,.4) 100%);
-// 	// }
-// }
+	&.popup-open {
+		left: 120px;
+		opacity: 1;
+	}
+	@media screen and (max-width: 1200px) {
+		.responsive-design {
+			width: 100%;
+		}
+	}
+	@media screen and (max-width: 768px) {
+		padding-right: 60px;
+	}
+	@media screen and (max-width: 500px) {
+		padding: 60px 30px;
+		padding-right: 30px;
+		width: calc(100vw - 60px);
+		&.popup-open {
+			left: 60px;
+			opacity: 1;
+		}
+	}
+}
 
-// .popup-open {	
-// 	right: -10px;
-// 	.projects-project-text {
-// 		padding: 20% 10%;
-// 	}
-// 	.projects-project-text:after {
-// 		display: block;
-// 	}
-// 	.background {
-// 		display: block;
-// 		opacity: .15;
-// 	}
-// 	.projects-project-detail {
-// 		opacity: 1;
-// 		margin-top: 100px;
-// 		@media screen and (max-width: 400px) {
-// 			margin-top: 40px;
-// 		}
-// 	}
-// 	.site-credit {
-// 		display: block;
-// 		opacity: 1;
-// 		bottom: 15%;
-// 		@media screen and (max-width: 400px) {
-// 			bottom: 10%;
-// 		}
-// 	}
-// 	.view-project {
-// 		display: none;
-// 	}
+.projects-row, .about-container, .contact-container {
+	transition: 1s ease;
+}
 
-// 	@media screen and (max-width: 550px) {
-// 		width: calc(100% - 72px);
-// 		left: 46px;
-// 		transform: translateY(-50%);
-// 	}
-// }
 
 .close-popup {
-	position: absolute;
+	position: fixed;
 	top: 25px;
 	right: 25px;
 	width: 25px;
@@ -878,35 +872,12 @@ body {
 
 .square {
 	padding-bottom: 100%;
-	.projects-project-detail {
-		font-size: 16px;
-		margin-top: 40px;
-		@media screen and (max-width: 760px) {
-			margin-top: 20px;
-		}
-	}
 }
 
-.grove .tall {
-	@media screen and (max-width: 770px) {
+
+.r2v .tall {
+	@media screen and (max-width: 767px) {
 		padding-bottom: 100%;
-		.projects-project-detail {
-			margin-top: 20px;
-		}
-	}
-}
-
-.vancouver .square {
-	&.border:hover {
-		.projects-project-text {
-			padding-top: 10px;
-		}	
-	}
-	.projects-project-detail {
-		margin-top: 20px;
-	}
-	.site-credit {
-		bottom: 10px;
 	}
 }
 
@@ -968,7 +939,7 @@ body {
 }
 
 .contact-detail {
-	font-family: "futura-pt",sans-serif;
+	font-family: $futura;
 	font-size: 20px;
 	max-width: 0;
 	overflow: hidden;

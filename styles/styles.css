@@ -203,7 +203,8 @@ body {
       z-index: -1; } }
   @media screen and (max-width: 660px) {
     .js-logo-after-scroll {
-      right: -14.4px; } }
+      right: -14.4px;
+      opacity: 0; } }
   @media screen and (max-width: 500px) {
     .js-logo-after-scroll {
       right: -10.8px; } }
@@ -211,7 +212,7 @@ body {
 .is-chrome .js-logo-after-scroll {
   transform: scale(0.6) rotate(-90deg) translate(25%, 220%);
   bottom: 0;
-  right: 0; }
+  right: 0px; }
 
 .js-logo-after-scroll .logo-container {
   transform-origin: left bottom; }
@@ -304,6 +305,9 @@ body {
 .about {
   padding: 40px 0;
   margin-top: 120px; }
+  @media screen and (max-width: 980) {
+    .about {
+      padding: 40px 60px; } }
 
 .about-title {
   font-size: 60px;
@@ -377,7 +381,7 @@ body {
   text-align: center;
   font-size: 20px;
   color: white;
-  font-family: "futura-pt",sans-serif;
+  font-family: "futura-pt";
   max-width: 480px; }
   @media screen and (max-width: 980px) {
     .about-p {
@@ -400,13 +404,11 @@ body {
     background-color: #9A40E5; }
 
 .projects {
-  padding: 40px 80px; }
+  padding: 40px 80px;
+  position: relative; }
   @media screen and (max-width: 980px) {
     .projects {
       padding: 40px 0;
-      padding-left: 80px; } }
-  @media screen and (max-width: 770px) {
-    .projects {
       padding-left: 40px; } }
   @media screen and (max-width: 550px) {
     .projects {
@@ -552,6 +554,7 @@ body {
   left: 0px;
   top: 0;
   width: 100%;
+  transition: 0;
   height: 100%;
   overflow: hidden;
   bottom: 0; }
@@ -570,21 +573,15 @@ body {
   @media screen and (max-width: 500px) {
     .projects-project-text {
       padding: 10px; } }
+  .projects-project-text:hover {
+    cursor: pointer; }
 
-.project-fullscreen {
-  left: 80px !important;
-  top: 0 !important;
-  z-index: 10;
-  width: calc(100% - 80px) !important;
-  height: 100vh !important;
-  box-shadow: -2px 1px 3px 0px rgba(0, 0, 0, 0.3);
-  overflow: scroll;
-  background-image: linear-gradient(-180deg, rgba(43, 255, 172, 0.2) 0%, rgba(255, 50, 236, 0.2) 54%, rgba(121, 244, 207, 0.2) 100%); }
-  .project-fullscreen .projects-project-detail, .project-fullscreen .site-credit, .project-fullscreen .close-popup {
-    display: block; }
-  .project-fullscreen .view-project {
-    display: none; }
+.projectsText-transition {
+  transition: all 5s ease; }
 
+@media screen and (max-width: 500px) {
+  .projects-project-text .projects-project-keywords {
+    display: none; } }
 .background {
   position: absolute;
   z-index: -1;
@@ -597,19 +594,46 @@ body {
   opacity: 0;
   display: none; }
 
-.grove .background {
+.upcart .background {
   background-position: 60% 100%; }
 
 .projects-project-title {
-  font-size: 20px;
-  font-weight: bold; }
+  font-size: 24px;
+  font-weight: bold;
+  position: relative;
+  display: inline-block; }
+  .projects-project-title:before {
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    left: 0;
+    width: 0;
+    height: 60%;
+    opacity: 0.15;
+    background-color: #9A40E5;
+    transition: .4s ease; }
+  .projects-project-title:hover:before {
+    width: 100%; }
 
 .projects-project-detail {
+  font-family: "futura-pt";
   font-size: 18px;
   margin-top: 50px;
-  width: 100%;
-  display: none; }
+  width: 100%; }
 
+.responsive-design {
+  max-width: 960px;
+  width: 70%;
+  margin: 40px auto; }
+
+.projects-project-keywords {
+  font-family: "futura-pt";
+  margin-top: 12px;
+  font-size: 16px; }
+
+@media screen and (max-width: 800px) {
+  .projects-project-detail .projects-project-keywords {
+    font-size: 14px; } }
 .view-project {
   text-align: right;
   position: absolute;
@@ -669,18 +693,50 @@ body {
 
 .site-credit {
   display: none;
-  text-align: right;
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
   font-size: 14px;
-  transform: translateY(10px); }
+  margin-left: 48px; }
+
+.project-popups .project-info {
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  left: 100vw;
+  width: calc(100vw - 120px);
+  overflow: scroll;
+  z-index: 99;
+  padding: 60px;
+  padding-right: 180px;
+  opacity: 0;
+  border-left: solid 3px white;
+  box-shadow: -1px 1px 1px 0px rgba(0, 0, 0, 0.3);
+  transition: 1s ease; }
+  .project-popups .project-info .projects-project-title {
+    font-size: 48px; }
+    .project-popups .project-info .projects-project-title:before {
+      width: 100%; }
+  .project-popups .project-info.popup-open {
+    left: 120px;
+    opacity: 1; }
+  @media screen and (max-width: 1200px) {
+    .project-popups .project-info .responsive-design {
+      width: 100%; } }
+  @media screen and (max-width: 768px) {
+    .project-popups .project-info {
+      padding-right: 60px; } }
+  @media screen and (max-width: 500px) {
+    .project-popups .project-info {
+      padding: 60px 30px;
+      padding-right: 30px;
+      width: calc(100vw - 60px); }
+      .project-popups .project-info.popup-open {
+        left: 60px;
+        opacity: 1; } }
+
+.projects-row, .about-container, .contact-container {
+  transition: 1s ease; }
 
 .close-popup {
-  display: none; }
-
-.close-popup {
-  position: absolute;
+  position: fixed;
   top: 25px;
   right: 25px;
   width: 25px; }
@@ -711,25 +767,10 @@ body {
 
 .square {
   padding-bottom: 100%; }
-  .square .projects-project-detail {
-    font-size: 16px;
-    margin-top: 40px; }
-    @media screen and (max-width: 760px) {
-      .square .projects-project-detail {
-        margin-top: 20px; } }
 
-@media screen and (max-width: 770px) {
-  .grove .tall {
-    padding-bottom: 100%; }
-    .grove .tall .projects-project-detail {
-      margin-top: 20px; } }
-
-.vancouver .square.border:hover .projects-project-text {
-  padding-top: 10px; }
-.vancouver .square .projects-project-detail {
-  margin-top: 20px; }
-.vancouver .square .site-credit {
-  bottom: 10px; }
+@media screen and (max-width: 767px) {
+  .r2v .tall {
+    padding-bottom: 100%; } }
 
 .contact {
   padding-right: 80px;
@@ -821,7 +862,7 @@ body {
       font-size: 26px; } }
 
 .contact-detail {
-  font-family: "futura-pt",sans-serif;
+  font-family: "futura-pt";
   font-size: 20px;
   max-width: 0;
   overflow: hidden;
