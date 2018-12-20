@@ -846,8 +846,8 @@ body {
 
 .close-popup {
 	position: fixed;
-	top: 0;
-	right: 0;
+	top: -5px;
+	right: -5px;
 	z-index: 9999;
 	width: 25px;
 	touch-action: manipulation;
@@ -856,9 +856,7 @@ body {
 	&:hover {
 		cursor: pointer;
 	}
-	@media screen and (max-width: 400px) {
-		top: 5%;
-	}
+
 }
 
 .close-popup_line {
