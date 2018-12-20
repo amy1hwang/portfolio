@@ -157,61 +157,86 @@ $(function() {
 	});
 
 	
-	$('.view-project').click(function() {
+	$('[project-name]').click(function() {
 		//get project-name attr, and find the same id name .projects-project-text
 		var projectName = $(this).attr('project-name');
-		var projectsProject = $('.' + projectName);
-		var projectBorder = $('.' + projectName + ' ' + '.border');
-		var projectText = $('.projects-project-text[project="' + projectName + '"]');
+		// var projectsProject = $('.' + projectName);
+		// var projectBorder = $('.' + projectName + ' ' + '.border');
+		var projectInfo = $('.project-info[project="' + projectName + '"]');
 
 		//get the offset left and top
-		var offsetLeft = projectText.offset().left;
-		var offsetTop = projectText.offset().top - $(window).scrollTop();
+		// var offsetLeft = projectText.offset().left;
+		// var offsetTop = projectText.offset().top - $(window).scrollTop();
 
 		//change css values of project boxes
-		projectText.css({
-		    'position': 'fixed', 
-		    'top': offsetTop + 'px',
-		    'left': offsetLeft + 'px',
-		    'width': projectText.width() + 40,
-		    'height': projectText.height() + 40,
-		});
+		projectInfo.addClass('popup-open');
+		$('.projects-row').css('opacity', '0');
+		$('.about-container').css('opacity', '0');
+		$('.contact-container').css('opacity', '0');
+		projectInfo.css('opacity', '1');
 
-		$('.border').addClass('remove-borders');
-		projectText.addClass('project-fullscreen');
-		$('.projects-project-text, .about, .contact').hide();
-		projectText.show();
+		//     'position': 'fixed', 
+		//     'left': offsetLeft + 'px',
+		//     'width': projectText.width() + 40,
+		//     'height': projectText.height() + 40,
+		//     'background-image': 'linear-gradient(-180deg, rgba(43,255,172,.2) 0%, rgba(255,50,236,.2) 54%, rgba(121,244,207,.2) 100%)'
+		// });
+		// setTimeout(function() {
+		// 	projectText.addClass('projectsText-transition');
+		// }, 50)
+		// setTimeout(function() {
+		// 	projectText.addClass('project-fullscreen');
+		// }, 100)
+		// $('.border').addClass('remove-borders');
+		// $('.projects-project-text, .about, .contact').hide();
+		// projectText.show();
 		// //lock scroll
 		$('body').addClass('scroll-lock');
 		//expand to fullscreen
 
 		
 		//escape case study when clicked outside the popup
-		$(document).click(function() {
-			projectText.css({
-			    'position': '', 
-			    'top': '',
-			    'left': '',
-			    'width': '',
-			    'height': '',
-			});
-			$('.border').removeClass('remove-borders');
-		    projectText.removeClass('project-fullscreen');
-		    $('body').removeClass('scroll-lock');
-			$('.projects-project-text, .about, .contact').show();
-		});
-		$('.project-fullscreen').click(function(event) {
-			event.stopPropagation();
-		});
+		// $(document).click(function() {
+		// 	projectText.css({
+		// 	    'position': '', 
+		// 	    'top': '',
+		// 	    'left': '',
+		// 	    'width': '',
+		// 	    'height': '',
+		// 	});
+		// 	$('.border').removeClass('remove-borders');
+		//     projectText.removeClass('project-fullscreen');
+		//     $('body').removeClass('scroll-lock');
+		// 	$('.projects-project-text, .about, .contact').show();
+		// });
+		// $('.project-fullscreen').click(function(event) {
+		// 	event.stopPropagation();
+		// });
 
 			//close the popup
 		$('.close-popup').click(function() {
-			// var popupProject = $('.popup .projects-project-text');
-			// var projectName = $(popupProject).attr('project');
-			projectText.removeClass('project-fullscreen');
-			$('body').removeClass('scroll-lock');
-			$('.projects-project, .about, .contact').show();
-			// $(popupProject).remove();
+			$('.border').removeClass('remove-borders');
+			$('.projects-row').css('opacity', '1');
+			$('.about-container').css('opacity', '1');
+			$('.contact-container').css('opacity', '1');
+			// setTimeout(function() {
+			// 	projectText.css({
+			// 	    'position': '', 
+			// 	    'top': '',
+			// 	    'left': '',
+			// 	    'width': '',
+			// 	    'height': '',
+			// 	    'background-image': ''
+			// 	});
+			//     $('section').css('display', 'block');
+			// },400);
+			// setTimeout(function() {
+			// 	projectInfo.removeClass('projectsText-transition');
+			// },500);
+			    $('body').removeClass('scroll-lock');
+			projectInfo.css('opacity', '0');
+		    projectInfo.removeClass('popup-open');
+			// $('.projects-project-text, .about, .contact').show();
 		});
 	});
 
